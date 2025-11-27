@@ -1,0 +1,57 @@
+def transformer_block(x, num_heads=4, ff_dim=256, dropout=0.1):
+    # Multi-head self-attention
+    attn_output = layers.MultiHeadAttention(
+        num_heads=num_heads, key_dim=x.shape[-1]
+    )(x, x)
+
+    # Skip connection + LayerNorm
+    out1 = layers.LayerNormalization(epsilon=1e-6)(x + attn_output)
+
+    # Feed Forward Network
+    ffn = tf.keras.Sequential([
+        layers.Dense(ff_dim, activation="relu"),
+        layers.Dense(x.shape[-1])
+    ])
+
+    ffn_output = ffn(out1)
+    ffn_output = layers.Dropout(dropout)(ffn_output)
+
+    # Second skip + layernorm
+    return layers.LayerNormalization(epsilon=1e-6)(out1 + ffn_output)
+
+
+def build_model(strategy):
+    with strategy.scope():
+        inp = layers.Input(shape=(1,), dtype=tf.string)
+
+        # RETVec outputs [batch, seq_len, 256]
+        x = RETVecTokenizer(model="retvec-v1")(inp)
+
+        # Transformer Block 1
+        x = transformer_block(x, num_heads=4, ff_dim=256, dropout=0.1)
+
+        # Transformer Block 2 (recommended)
+        x = transformer_block(x, num_heads=4, ff_dim=256, dropout=0.1)
+
+        # Global pooling
+        x = layers.GlobalAveragePooling1D()(x)
+
+        # Dense Layers
+        x = layers.Dense(256, activation="relu")(x)
+        x = layers.Dropout(0.3)(x)
+
+        x = layers.Dense(128, activation="relu")(x)
+        x = layers.Dropout(0.2)(x)
+
+        out = layers.Dense(1, activation="sigmoid")(x)
+
+        model = tf.keras.Model(inp, out)
+
+        model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),
+            loss="binary_crossentropy",
+            metrics=["accuracy"],
+        )
+
+    model.summary(print_fn=lambda s: logging.info(s))
+    return model
