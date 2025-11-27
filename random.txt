@@ -1,4 +1,38 @@
 import numpy as np
+import pandas as pd
+
+def infer_df(model, df, text_col="text"):
+    """
+    model: trained TF model
+    df: pandas DataFrame
+    text_col: column containing text
+    
+    Returns a new DF with predictions + labels.
+    """
+
+    texts = df[text_col].astype(str).tolist()
+
+    # Model expects shape (N, 1) of dtype string
+    inputs = np.array(texts, dtype=object).reshape(-1, 1)
+
+    preds = model.predict(inputs, verbose=0)
+
+    # Binary → sigmoid → threshold
+    if preds.shape[-1] == 1:
+        labels = (preds.ravel() > 0.5).astype(int)
+    else:  # multi-class
+        labels = np.argmax(preds, axis=-1)
+
+    out = df.copy()
+    out["pred_score"] = preds.ravel()
+    out["pred_label"] = labels
+
+    return out
+
+
+
+
+import numpy as np
 from sklearn.metrics import classification_report
 
 def collect_preds(model, dataset):
