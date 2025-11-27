@@ -1,3 +1,59 @@
+import numpy as np
+from sklearn.metrics import classification_report
+
+def collect_preds(model, dataset):
+    all_preds = []
+    all_labels = []
+
+    for batch_x, batch_y in dataset:
+        preds = model.predict(batch_x, verbose=0)
+
+        # Binary classification → sigmoid → threshold
+        if preds.shape[-1] == 1:
+            batch_pred = (preds.ravel() > 0.5).astype(int)
+        else:
+            batch_pred = np.argmax(preds, axis=-1)
+
+        all_preds.extend(batch_pred)
+        all_labels.extend(batch_y.numpy())
+
+    return np.array(all_labels), np.array(all_preds)
+
+
+# After training finishes
+history = model.fit(
+    train_ds,
+    validation_data=val_ds,
+    epochs=args.epochs,
+)
+
+print("\n================ GENERATING REPORTS ================")
+
+# TRAIN
+y_true_train, y_pred_train = collect_preds(model, train_ds)
+train_report = classification_report(
+    y_true_train,
+    y_pred_train,
+    target_names=["others", "promotion"],
+    zero_division=0
+)
+print("---- TRAIN CLASSIFICATION REPORT ----")
+print(train_report)
+
+# VAL
+y_true_val, y_pred_val = collect_preds(model, val_ds)
+val_report = classification_report(
+    y_true_val,
+    y_pred_val,
+    target_names=["others", "promotion"],
+    zero_division=0
+)
+print("---- VAL CLASSIFICATION REPORT ----")
+print(val_report)
+
+
+
+
 import tensorflow as tf
 from sklearn.metrics import precision_score, recall_score, f1_score
 import numpy as np
