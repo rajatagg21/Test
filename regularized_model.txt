@@ -1,0 +1,84 @@
+import tensorflow as tf
+from tensorflow.keras import layers, models, regularizers
+from keras_nlp.layers import RETVecTokenizer
+
+def build_model_with_regularization(strategy,
+                                    gru_units=[256, 192, 128, 64],
+                                    dropout_rate=0.3,
+                                    recurrent_dropout=0.15,
+                                    l2=1e-5,
+                                    lr=1e-4):
+    with strategy.scope():
+        inp = layers.Input(shape=(1,), dtype=tf.string)
+
+        # RETVec output: (batch, seq_len, embed_dim)
+        x = RETVecTokenizer(model="retvec-v1")(inp)  
+
+        # Optionally project to a smaller dim (if RETVec is large)
+        # x = layers.Dense(256, activation=None,
+        #                  kernel_regularizer=regularizers.l2(l2))(x)
+        # x = layers.LayerNormalization()(x)
+
+        # Stacked BiGRU with dropout + recurrent_dropout + L2 on kernels
+        for i, units in enumerate(gru_units):
+            return_seq = True if i < (len(gru_units) - 1) else False
+            x = layers.Bidirectional(
+                    layers.GRU(
+                        units,
+                        return_sequences=return_seq,
+                        dropout=dropout_rate if return_seq else 0.0,    # dropout on inputs to GRU
+                        recurrent_dropout=recurrent_dropout,
+                        kernel_regularizer=regularizers.l2(l2)
+                    )
+                )(x)
+            if return_seq:
+                # optional normalization helps stabilize deep RNN stacks
+                x = layers.LayerNormalization()(x)
+                # additional dropout between stacked layers
+                x = layers.Dropout(dropout_rate)(x)
+
+        # Final classifier head
+        x = layers.Dense(128, activation="relu",
+                         kernel_regularizer=regularizers.l2(l2))(x)
+        x = layers.Dropout(dropout_rate)(x)
+        outputs = layers.Dense(1, activation="sigmoid")(x)
+
+        model = models.Model(inputs=inp, outputs=outputs)
+
+        # Recommended: AdamW with weight decay (tf has experimental AdamW in some TF versions)
+        try:
+            optimizer = tf.keras.optimizers.Adam(learning_rate=lr, clipnorm=1.0)
+        except Exception:
+            optimizer = tf.keras.optimizers.Adam(learning_rate=lr, clipnorm=1.0)
+
+        model.compile(
+            optimizer=optimizer,
+            loss="binary_crossentropy",
+            metrics=["accuracy"]
+        )
+
+    model.summary(print_fn=lambda s: print(s))
+    return model
+
+
+callbacks = [
+    tf.keras.callbacks.EarlyStopping(
+        monitor="val_loss",
+        patience=3,
+        restore_best_weights=True,
+        verbose=1
+    ),
+    tf.keras.callbacks.ReduceLROnPlateau(
+        monitor="val_loss",
+        factor=0.5,
+        patience=1,
+        min_lr=1e-7,
+        verbose=1
+    ),
+    tf.keras.callbacks.ModelCheckpoint(
+        filepath=f"{base_dir}/model/best_model.h5",
+        monitor="val_loss",
+        save_best_only=True,
+        verbose=1
+    )
+]
