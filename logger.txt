@@ -1,0 +1,26 @@
+def init_logger(log_file_path):
+    logger = logging.getLogger("ads_classifier")
+    logger.setLevel(logging.INFO)
+
+    # Remove old handlers (important for repeated runs)
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
+    # File handler
+    fh = logging.FileHandler(log_file_path)
+    fh.setLevel(logging.INFO)
+    fh.setFormatter(logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s"
+    ))
+
+    # Console handler (optional)
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+    ch.setFormatter(logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s"
+    ))
+
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+
+    return logger
