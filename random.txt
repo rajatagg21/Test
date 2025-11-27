@@ -1,9 +1,66 @@
-metrics=[
-    tf.keras.metrics.Precision(name="precision"),
-    tf.keras.metrics.Recall(name="recall"),
-    tf.keras.metrics.Accuracy(name="accuracy"),
-    tf.keras.metrics.F1Score(name="f1-score")
-]
+import tensorflow as tf
+from sklearn.metrics import precision_score, recall_score, f1_score
+import numpy as np
+
+
+class PRF1Callback(tf.keras.callbacks.Callback):
+    def __init__(self, val_data, logger=None):
+        super().__init__()
+        self.val_data = val_data
+        self.logger = logger
+
+    def on_epoch_end(self, epoch, logs=None):
+        val_X, val_y = self.val_data
+
+        # Forward pass
+        preds = self.model.predict(val_X, verbose=0)
+
+        # Binary classification
+        if preds.shape[-1] == 1:
+            y_pred = (preds.ravel() > 0.5).astype(int)
+            y_true = val_y.astype(int)
+        else:
+            # Multi-class
+            y_pred = np.argmax(preds, axis=-1)
+            y_true = np.argmax(val_y, axis=-1)
+
+        # Compute metrics
+        precision = precision_score(y_true, y_pred, zero_division=0)
+        recall = recall_score(y_true, y_pred, zero_division=0)
+        f1 = f1_score(y_true, y_pred, zero_division=0)
+
+        # Add to logs dict for model.fit() purposes
+        logs = logs or {}
+        logs["val_precision"] = precision
+        logs["val_recall"] = recall
+        logs["val_f1"] = f1
+
+        msg = (f"Epoch {epoch+1}: "
+               f"Precision={precision:.4f}, "
+               f"Recall={recall:.4f}, "
+               f"F1={f1:.4f}")
+
+        # Print
+        print("\n" + msg)
+
+        # Log to logger instance (if provided)
+        if self.logger is not None:
+            self.logger.info(msg)
+
+
+prf1_cb = PRF1Callback(
+    val_data=(val_X, val_y),
+    logger=logger
+)
+
+model.fit(
+    train_dataset,
+    validation_data=(val_X, val_y),
+    epochs=5,
+    callbacks=[prf1_cb]
+)
+
+
 
 import matplotlib.pyplot as plt
 
