@@ -94,3 +94,51 @@ def load_dataset(path, batch_size, shuffle=True):
     return ds
 
 
+# GRU + self attention block
+
+from tensorflow.keras import layers, models
+from keras_nlp.layers import RETVecTokenizer
+
+def build_model(strategy):
+    with strategy.scope():
+
+        inputs = layers.Input(shape=(1,), dtype=tf.string)
+        
+        # RETVec encodes text → tensor (batch, seq_len, 256)
+        x = RETVecTokenizer(model="retvec-v1")(inputs)
+
+        # BiGRU stack
+        x = layers.Bidirectional(layers.GRU(128, return_sequences=True))(x)
+        x = layers.Bidirectional(layers.GRU(64, return_sequences=True))(x)
+
+        # Inbuilt MultiHeadAttention (self-attention)
+        attn_output = layers.MultiHeadAttention(
+            num_heads=4, 
+            key_dim=64,
+            dropout=0.1
+        )(x, x)
+
+        # Residual + LayerNorm (make it transformer-style)
+        x = layers.LayerNormalization()(x + attn_output)
+
+        # Global pooling to get sentence-level embedding
+        x = layers.GlobalAveragePooling1D()(x)
+
+        # Dense layers
+        x = layers.Dense(128, activation="relu")(x)
+        x = layers.Dropout(0.2)(x)
+
+        outputs = layers.Dense(1, activation="sigmoid")(x)
+
+        model = models.Model(inputs, outputs)
+
+        model.compile(
+            optimizer=tf.keras.optimizers.Adam(1e-3),
+            loss="binary_crossentropy",
+            metrics=["accuracy"]
+        )
+
+    model.summary()
+    return model
+
+
