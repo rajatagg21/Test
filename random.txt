@@ -1,24 +1,26 @@
-import tensorflow as tf
+metrics=[
+    tf.keras.metrics.Precision(name="precision"),
+    tf.keras.metrics.Recall(name="recall"),
+    tf.keras.metrics.Accuracy(name="accuracy"),
+    tf.keras.metrics.F1Score(name="f1-score")
+]
 
-class EpochLogger(tf.keras.callbacks.Callback):
-    def __init__(self, logger):
-        super().__init__()
-        self.logger = logger
+import matplotlib.pyplot as plt
 
-    def on_epoch_end(self, epoch, logs=None):
-        logs = logs or {}
-        msg = (
-            f"Epoch {epoch+1} - "
-            f"loss={logs.get('loss'):.4f}, "
-            f"val_loss={logs.get('val_loss'):.4f}, "
-        )
-
-        # add metrics dynamically
-        for k, v in logs.items():
-            if k not in ["loss", "val_loss"]:
-                msg += f"{k}={v:.4f}, "
-
-        self.logger.info(msg.rstrip(", "))
+def save_loss_curve(history, output_path):
+    """
+    Saves train/val loss curve to PNG without displaying it.
+    """
+    plt.figure(figsize=(8, 5))
+    plt.plot(history.history["loss"], label="Train Loss")
+    plt.plot(history.history["val_loss"], label="Val Loss")
+    plt.xlabel("Epoch")
+    plt.ylabel("Loss")
+    plt.title("Train vs Validation Loss")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()   # <-- important: prevents display and frees memory
 
 
 def transformer_block(x, num_heads=4, ff_dim=256, dropout=0.1):
