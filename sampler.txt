@@ -103,3 +103,160 @@ trainer = BalancedTrainer(
 )
 
 trainer.train()
+
+------------------------------------------------------
+
+## class weights
+
+from torch import nn
+import torch
+from transformers import AutoModel, SequenceClassifierOutput
+
+class MiniLMWithHead(nn.Module):
+    def __init__(self, model_name, num_labels=2, class_weights=None):
+        super().__init__()
+
+        self.encoder = AutoModel.from_pretrained(model_name)
+        hidden_size = self.encoder.config.hidden_size
+
+        # Freeze backbone if needed
+        for p in self.encoder.parameters():
+            p.requires_grad = False
+
+        # classifier head
+        self.classifier = nn.Sequential(
+            nn.Linear(hidden_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, num_labels)
+        )
+
+        # register class weights
+        if class_weights is not None:
+            self.class_weights = torch.tensor(class_weights, dtype=torch.float)
+        else:
+            self.class_weights = None
+
+        self.num_labels = num_labels
+        self.loss_fn = nn.CrossEntropyLoss(weight=self.class_weights)
+
+    def forward(self, input_ids, attention_mask, labels=None):
+        outputs = self.encoder(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            output_hidden_states=False,
+            return_dict=True,
+        )
+
+        # CLS pooling
+        cls = outputs.last_hidden_state[:, 0, :]   # [batch, hidden]
+
+        logits = self.classifier(cls)
+
+        loss = None
+        if labels is not None:
+            loss = self.loss_fn(logits, labels)
+
+        return SequenceClassifierOutput(
+            loss=loss,
+            logits=logits,
+        )
+
+
+from sklearn.utils.class_weight import compute_class_weight
+import numpy as np
+import torch
+
+labels = np.array(train_labels)
+cls_weights = compute_class_weight(
+    class_weight="balanced",
+    classes=np.unique(labels),
+    y=labels
+)
+
+model = MiniLMWithHead(
+    model_name="nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large",
+    num_labels=2,
+    class_weights=cls_weights
+)
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset,
+    tokenizer=tokenizer,
+)
+trainer.train()
+
+
+---------------------------------------------
+## classification head with transformer block
+
+import torch
+import torch.nn as nn
+from transformers import AutoModel, SequenceClassifierOutput
+
+class MiniLMClassifier(nn.Module):
+    def __init__(self, model_name, num_labels=2):
+        super().__init__()
+
+        # --- Backbone ---
+        self.encoder = AutoModel.from_pretrained(model_name)
+        self.hidden_size = self.encoder.config.hidden_size
+
+        # Freeze MiniLM backbone
+        for p in self.encoder.parameters():
+            p.requires_grad = False
+
+        # --- ALWAYS add 1 transformer block on top ---
+        self.top_encoder = nn.TransformerEncoder(
+            nn.TransformerEncoderLayer(
+                d_model=self.hidden_size,
+                nhead=8,
+                dim_feedforward=self.hidden_size * 4,
+                batch_first=True
+            ),
+            num_layers=1
+        )
+
+        # --- Classifier head ---
+        self.classifier = nn.Sequential(
+            nn.Linear(self.hidden_size, self.hidden_size * 4),
+            nn.GELU(),
+            nn.Dropout(0.2),
+            nn.Linear(self.hidden_size * 4, num_labels),
+        )
+
+        self.loss_fn = nn.CrossEntropyLoss()
+
+    def mean_pooling(self, hidden_states, attention_mask):
+        mask = attention_mask.unsqueeze(-1)                  # [B, L, 1]
+        summed = (hidden_states * mask).sum(dim=1)           # [B, H]
+        counts = mask.sum(dim=1)                             # [B, 1]
+        return summed / counts
+
+    def forward(self, input_ids, attention_mask, labels=None):
+        # --- Get MiniLM outputs ---
+        outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
+        hidden_states = outputs.last_hidden_state            # [B, L, H]
+
+        # --- Process through extra transformer block ---
+        hidden_states = self.top_encoder(hidden_states)
+
+        # --- Mean pooling ---
+        pooled = self.mean_pooling(hidden_states, attention_mask)
+
+        # --- Classifier ---
+        logits = self.classifier(pooled)
+
+        # --- Compute loss ---
+        loss = None
+        if labels is not None:
+            loss = self.loss_fn(logits, labels)
+
+        # --- HF output ---
+        return SequenceClassifierOutput(
+            loss=loss,
+            logits=logits,
+            hidden_states=outputs.hidden_states,
+            attentions=outputs.attentions,
+        )
