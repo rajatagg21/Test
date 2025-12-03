@@ -260,3 +260,18 @@ class MiniLMClassifier(nn.Module):
             hidden_states=outputs.hidden_states,
             attentions=outputs.attentions,
         )
+
+
+import pandas as pd
+
+def sample_group(g):
+    # keep all 'b'
+    b_part = g[g['negtype'] == 'b']
+    
+    # sample 1 random 'a' if exists
+    a_part = g[g['negtype'] == 'a'].sample(1, random_state=42) \
+             if (g['negtype'] == 'a').any() else pd.DataFrame()
+    
+    return pd.concat([b_part, a_part], ignore_index=True)
+
+df_out = df.groupby("text", group_keys=False).apply(sample_group)
