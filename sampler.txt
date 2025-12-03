@@ -1,0 +1,105 @@
+import random
+from torch.utils.data import Sampler
+
+class LangDomainBalancedSampler(Sampler):
+    """
+    Balanced sampler that:
+      - Creates 1 balanced batch per (language, domain)
+      - Each batch contains 50% positives, 50% negatives
+      - Performs oversampling when needed
+      - Works with HF Trainer
+    """
+
+    def __init__(self, dataset, batch_size):
+        assert batch_size % 2 == 0, "Batch size must be even"
+        self.dataset = dataset
+        self.batch_size = batch_size
+        self.half = batch_size // 2
+
+        # Build groups for (language, domain, label)
+        self.groups = self._build_groups()
+        self.group_keys = list(self.groups.keys())
+
+    def _build_groups(self):
+        groups = {}
+        for idx, item in enumerate(self.dataset):
+            key = (item["language"], item["domain"])
+            if key not in groups:
+                groups[key] = {0: [], 1: []}
+            groups[key][item["label"]].append(idx)
+        return groups
+
+    def __iter__(self):
+        keys = self.group_keys.copy()
+        random.shuffle(keys)
+
+        for key in keys:
+            pos_list = self.groups[key][1]
+            neg_list = self.groups[key][0]
+
+            # Cannot create a balanced batch for this group
+            if len(pos_list) == 0 or len(neg_list) == 0:
+                continue
+
+            # ---- Positive sampling ----
+            pos_indices = (
+                random.sample(pos_list, self.half)
+                if len(pos_list) >= self.half
+                else random.choices(pos_list, k=self.half)
+            )
+
+            # ---- Negative sampling ----
+            neg_indices = (
+                random.sample(neg_list, self.half)
+                if len(neg_list) >= self.half
+                else random.choices(neg_list, k=self.half)
+            )
+
+            batch = pos_indices + neg_indices
+            random.shuffle(batch)
+
+            for idx in batch:
+                yield idx  # Dataloader groups sequential indices into batches
+
+    def __len__(self):
+        valid_group_count = sum(
+            1
+            for k in self.group_keys
+            if len(self.groups[k][0]) > 0 and len(self.groups[k][1]) > 0
+        )
+        return valid_group_count * self.batch_size
+
+
+
+from transformers import Trainer
+from torch.utils.data import DataLoader
+
+class BalancedTrainer(Trainer):
+    def get_train_dataloader(self):
+        sampler = LangDomainBalancedSampler(
+            self.train_dataset,
+            batch_size=self.args.per_device_train_batch_size
+        )
+
+        return DataLoader(
+            self.train_dataset,
+            batch_size=self.args.per_device_train_batch_size,
+            sampler=sampler,
+            collate_fn=self.data_collator
+        )
+
+    # Eval → do NOT use custom sampler
+    # HF default behavior is correct
+
+
+trainer = BalancedTrainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset,
+    tokenizer=tokenizer,
+    data_collator=data_collator,
+    compute_metrics=compute_metrics,
+)
+
+trainer.train()
