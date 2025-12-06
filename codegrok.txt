@@ -1,3 +1,14 @@
+Datasets:
+
+https://huggingface.co/datasets/okite97/news-data
+https://huggingface.co/datasets/heegyu/news-category-dataset
+https://huggingface.co/datasets/AndyReas/frontpage-news
+https://huggingface.co/datasets/Deysi/spam-detection-dataset
+https://huggingface.co/datasets/mshenoda/spam-messages
+https://huggingface.co/datasets/cardiffnlp/tweet_eval
+
+
+
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
