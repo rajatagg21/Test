@@ -83,3 +83,117 @@ plt.xlabel("Dim 1")
 plt.ylabel("Dim 2")
 plt.grid(True)
 plt.show()
+
+
+
+
+
+
+
+Below is **clean, ready-to-use code** to show:
+
+### **1. Plot → Each domain separately**
+
+### **2. Plot → Within each domain, topic-wise scatter**
+
+This will tell you **exactly which domain and which topic** causes promotion vs non-promotion overlap.
+
+---
+
+# ✅ **Assumptions**
+
+Your DF contains:
+
+```
+df["text"]
+df["label"]           # promotion / non-promotion
+df["domain"]          # e.g. Finance, Shopping, Travel
+df["topic"]           # e.g. Credit card offers, Transaction confirmation
+embeddings_2d         # your UMAP / TSNE output
+```
+
+---
+
+# ✅ **Step-1: Plot DOMAIN-wise**
+
+```python
+unique_domains = df["domain"].unique()
+
+for dom in unique_domains:
+    mask = df["domain"] == dom
+    pts = points_2d[mask]
+    labels = df.loc[mask, "label"]
+    
+    plt.figure(figsize=(10, 8))
+    colors = labels.map({"promotion": "red", "non-promotion": "blue"})
+
+    plt.scatter(
+        pts[:, 0],
+        pts[:, 1],
+        c=colors,
+        alpha=0.7,
+        s=45
+    )
+
+    plt.title(f"Embedding Space — Domain: {dom}")
+    plt.xlabel("Dim 1")
+    plt.ylabel("Dim 2")
+    plt.grid(True)
+    plt.show()
+```
+
+This tells you **which domain clusters cleanly and which overlaps**.
+
+---
+
+# ✅ **Step-2: Plot TOPIC-wise (inside each domain)**
+
+Run this to see overlap **per topic per domain**:
+
+```python
+unique_domains = df["domain"].unique()
+
+for dom in unique_domains:
+    df_dom = df[df["domain"] == dom]
+    pts_dom = points_2d[df["domain"] == dom]
+
+    unique_topics = df_dom["topic"].unique()
+
+    for topic in unique_topics:
+        mask = (df["domain"] == dom) & (df["topic"] == topic)
+        pts = points_2d[mask]
+        labels = df.loc[mask, "label"]
+        
+        plt.figure(figsize=(10, 8))
+        colors = labels.map({"promotion": "red", "non-promotion": "blue"})
+
+        plt.scatter(
+            pts[:, 0],
+            pts[:, 1],
+            c=colors,
+            alpha=0.7,
+            s=45
+        )
+
+        plt.title(f"Domain: {dom} — Topic: {topic}")
+        plt.xlabel("Dim 1")
+        plt.ylabel("Dim 2")
+        plt.grid(True)
+        plt.show()
+```
+
+This gives you **one plot per topic** inside each domain.
+You will instantly see:
+
+✓ Topics that cluster well
+✓ Topics that create confusion (red-blue mixing)
+✓ Domains where promotional language overlaps with informational messaging
+
+---
+
+# 👉 **Optional (very useful): Side-by-side topic plots for each domain**
+
+If you want to view all topics **in one grid per domain**, I can generate that too.
+
+Just say: **“give me grid plot version”**.
+
