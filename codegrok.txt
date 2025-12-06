@@ -1,0 +1,85 @@
+import numpy as np
+import pandas as pd
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
+import umap
+
+# ------------------------
+# YOUR EMBEDDING FUNCTION
+# ------------------------
+def get_embedding(text: str):
+    """
+    Replace this with your real embedding API call.
+    """
+    # Example: return HF / OpenAI / MiniLM embedding
+    raise NotImplementedError
+
+
+# ------------------------
+# LOAD YOUR DATA
+# df must have: columns = ["text", "label"]
+# label ∈ {"promotion", "non-promotion"}
+# ------------------------
+df = pd.read_csv("data.csv")   # update path
+
+# ------------------------
+# COMPUTE EMBEDDINGS
+# ------------------------
+embeddings = []
+
+for txt in tqdm(df["text"], desc="Embedding"):
+    emb = get_embedding(txt)
+    emb = np.array(emb)
+    embeddings.append(emb)
+
+embeddings = np.vstack(embeddings)
+
+# ------------------------
+# DIMENSIONALITY REDUCTION
+# Choose one:
+#   1. UMAP (best global structure)
+#   2. t-SNE (best cluster separation)
+#   3. PCA (fast baseline)
+# ------------------------
+
+# ---- Option A: UMAP ----
+reducer = umap.UMAP(
+    n_neighbors=20,
+    min_dist=0.1,
+    metric='cosine',
+    random_state=42
+)
+points_2d = reducer.fit_transform(embeddings)
+
+# ---- Option B: t-SNE ----
+# points_2d = TSNE(
+#     n_components=2,
+#     perplexity=30,
+#     metric='cosine',
+#     random_state=42
+# ).fit_transform(embeddings)
+
+# ---- Option C: PCA ----
+# points_2d = PCA(n_components=2).fit_transform(embeddings)
+
+# ------------------------
+# PLOT
+# ------------------------
+plt.figure(figsize=(10, 8))
+colors = df["label"].map({"promotion": "red", "non-promotion": "blue"})
+
+plt.scatter(
+    points_2d[:, 0],
+    points_2d[:, 1],
+    c=colors,
+    alpha=0.6,
+    s=40
+)
+
+plt.title("Promotion vs Non-Promotion Embedding Space")
+plt.xlabel("Dim 1")
+plt.ylabel("Dim 2")
+plt.grid(True)
+plt.show()
