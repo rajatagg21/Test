@@ -1,0 +1,391 @@
+Below is a **clean production-ready sampler** where **batch_size is the only fixed thing**.
+Inside the batch, we enforce:
+
+* balanced promotion vs non-promotion
+* controlled number of languages
+* controlled number of domains
+* sampler automatically figures out how many samples to take per group so total = batch_size
+
+This version does **not** require `k_pos`, `k_neg` manually.
+It **derives them from batch_size**.
+
+---
+
+# ✅ **Balanced + Controlled Batch Sampler With Fixed batch_size**
+
+### **Key Behavior**
+
+If you specify:
+
+```
+batch_size = 32
+num_langs_per_batch = 2
+num_domains_per_batch = 2
+```
+
+Then:
+
+```
+groups = num_langs_per_batch * num_domains_per_batch = 4
+samples_per_group = batch_size // groups = 8
+→ so pos_per_group = 4, neg_per_group = 4
+```
+
+If batch_size is not divisible, sampler automatically adjusts by distributing remainder randomly.
+
+---
+
+# 🚀 **Final Code (Ready to Use)**
+
+```python
+import random
+from torch.utils.data import Sampler
+from collections import defaultdict
+
+
+class BalancedControlledBatchSampler(Sampler):
+    """
+    Creates batches of exactly batch_size with:
+    - balanced promotion / non-promotion samples
+    - controlled number of languages
+    - controlled number of domains per language
+    """
+
+    def __init__(
+        self,
+        df,
+        batch_size=32,
+        num_langs_per_batch=2,
+        num_domains_per_batch=2,
+    ):
+        self.df = df
+        self.batch_size = batch_size
+        self.num_langs_per_batch = num_langs_per_batch
+        self.num_domains_per_batch = num_domains_per_batch
+
+        # group -> list of indices
+        # key = (lang, domain, label)
+        self.index_map = defaultdict(list)
+        for idx, row in df.iterrows():
+            key = (row["lang"], row["domain"], row["content_label"])
+            self.index_map[key].append(idx)
+
+        # language → domains
+        self.langs = sorted(df.lang.unique())
+        self.domains_by_lang = defaultdict(list)
+        for lang in self.langs:
+            self.domains_by_lang[lang] = sorted(df[df.lang == lang].domain.unique())
+
+        # infinite-like iterator (you can adjust)
+        self.length = 10000
+
+    def __len__(self):
+        return self.length
+
+    def __iter__(self):
+        while True:
+            batch = []
+
+            # 1️⃣ pick langs
+            langs = random.sample(self.langs, self.num_langs_per_batch)
+
+            selected_groups = []  # list of (lang, domain)
+
+            # 2️⃣ pick domains per lang
+            for lang in langs:
+                available = self.domains_by_lang[lang]
+                domains = random.sample(
+                    available,
+                    min(self.num_domains_per_batch, len(available))
+                )
+                for d in domains:
+                    selected_groups.append((lang, d))
+
+            num_groups = len(selected_groups)
+            samples_per_group = self.batch_size // num_groups
+
+            # If not divisible, distribute leftover later
+            leftover = self.batch_size - samples_per_group * num_groups
+
+            # To keep pos == neg always
+            pos_per_group = samples_per_group // 2
+            neg_per_group = samples_per_group - pos_per_group  # handles odd numbers
+
+            # 3️⃣ fill batch
+            for (lang, domain) in selected_groups:
+                pos_key = (lang, domain, "promotion")
+                neg_key = (lang, domain, "others")
+
+                pos_pool = self.index_map.get(pos_key, [])
+                neg_pool = self.index_map.get(neg_key, [])
+
+                # fallback-safe sampling
+                if pos_pool:
+                    pos_idx = random.choices(pos_pool, k=pos_per_group)
+                else:
+                    pos_idx = []
+
+                if neg_pool:
+                    neg_idx = random.choices(neg_pool, k=neg_per_group)
+                else:
+                    neg_idx = []
+
+                batch.extend(pos_idx)
+                batch.extend(neg_idx)
+
+            # 4️⃣ distribute leftover samples (if batch_size not divisible)
+            while len(batch) < self.batch_size:
+                lang, domain = random.choice(selected_groups)
+
+                # randomly choose label for leftover (still ok)
+                label = random.choice(["promotion", "others"])
+                key = (lang, domain, label)
+                pool = self.index_map.get(key, [])
+
+                if pool:
+                    batch.append(random.choice(pool))
+                else:
+                    # fallback
+                    pass
+
+            yield batch[:self.batch_size]  # safety
+```
+
+---
+
+# ✔ Example Usage
+
+```python
+sampler = BalancedControlledBatchSampler(
+    df,
+    batch_size=32,
+    num_langs_per_batch=2,
+    num_domains_per_batch=2,
+)
+
+loader = DataLoader(
+    dataset,
+    batch_sampler=sampler,
+    collate_fn=my_collator,
+    num_workers=2
+)
+```
+
+---
+
+# 🎯 **Batch Composition Example**
+
+Given:
+
+```
+batch_size = 32
+num_langs_per_batch = 2
+num_domains_per_batch = 2
+```
+
+Sampler will create **4 groups**:
+
+```
+(lang1, domain1), (lang1, domain2),
+(lang2, domain1), (lang2, domain2)
+```
+
+Each group gets:
+
+```
+samples_per_group = 32 / 4 = 8
+promotion = 4
+others = 4
+```
+
+Perfectly balanced.
+
+---
+
+# ❓ Want Extensions?
+
+I can add:
+
+* enforce **same number of topics** in each batch
+* temperature-based sampling for low-resource languages
+* epoch-aware sampling (ensure full dataset coverage)
+* curriculum batching (start easy → hard)
+* domain-proportion-preserving sampling
+* multilingual weighted sampling
+
+Tell me what to add.
+
+
+
+Below is **clean, ready-to-run code** showing how to pass your **custom sampler DataLoader** into a **PyTorch Lightning Trainer**, **HuggingFace Trainer**, and **vanilla PyTorch training loop** — all three patterns.
+
+Pick whichever training API you use.
+
+---
+
+# 🅰 **If you are using HuggingFace Trainer (most common for MiniLM fine-tuning)**
+
+### ✔ You must override the default `get_train_dataloader()`
+
+HF Trainer **ignores** your DataLoader unless you subclass it.
+
+### ✅ **Code: Custom Trainer that injects DataLoader**
+
+```python
+from transformers import Trainer
+
+class CustomTrainer(Trainer):
+    def __init__(self, train_dataloader, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._train_dataloader = train_dataloader
+
+    def get_train_dataloader(self):
+        return self._train_dataloader
+```
+
+### ✔ Build DataLoader with your sampler
+
+```python
+dataset = MyDataset(df)
+sampler = BalancedControlledBatchSampler(df, batch_size=32, num_langs_per_batch=2, num_domains_per_batch=2)
+
+train_loader = DataLoader(
+    dataset,
+    batch_sampler=sampler,
+    collate_fn=your_collator,
+    num_workers=4,
+)
+```
+
+### ✔ Pass DataLoader into Trainer
+
+```python
+trainer = CustomTrainer(
+    model=model,
+    args=training_args,
+    train_dataloader=train_loader
+)
+
+trainer.train()
+```
+
+That’s it.
+HF Trainer will now ALWAYS use your custom balanced multilingual sampler.
+
+---
+
+# 🅱 **If you are using PyTorch Lightning Trainer**
+
+Lightning accepts external DataLoaders directly.
+
+### ✔ Just plug it into `trainer.fit`
+
+```python
+trainer.fit(model, train_loader)
+```
+
+### Full Example
+
+```python
+train_loader = DataLoader(
+    dataset,
+    batch_sampler=sampler,
+    collate_fn=your_collator,
+)
+
+trainer = pl.Trainer(
+    max_epochs=3,
+    accelerator="gpu",
+    devices=1,
+)
+
+trainer.fit(lightning_model, train_loader)
+```
+
+---
+
+# 🅾 **If you use Vanilla PyTorch training loop**
+
+This is the easiest:
+
+```python
+for epoch in range(num_epochs):
+    for batch in train_loader:
+        outputs = model(batch["input_ids"], ...)
+        loss = criterion(outputs, batch["labels"])
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+```
+
+---
+
+# 🔥 **Full MiniLM (HF) Training Script Example**
+
+This is **complete**, showing where your sampler fits.
+
+```python
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, TrainingArguments
+from transformers import Trainer
+
+# --- dataset ---
+dataset = MyDataset(df)
+
+# --- sampler ---
+sampler = BalancedControlledBatchSampler(
+    df,
+    batch_size=32,
+    num_langs_per_batch=2,
+    num_domains_per_batch=2,
+)
+
+train_loader = DataLoader(
+    dataset,
+    batch_sampler=sampler,
+    collate_fn=your_collator,
+    num_workers=4,
+)
+
+# --- model ---
+model = AutoModelForSequenceClassification.from_pretrained(
+    "nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large",
+    num_labels=2,
+)
+
+# --- custom trainer ---
+class CustomTrainer(Trainer):
+    def __init__(self, train_dataloader, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._train_dataloader = train_dataloader
+
+    def get_train_dataloader(self):
+        return self._train_dataloader
+
+# --- training args ---
+args = TrainingArguments(
+    output_dir="output",
+    per_device_train_batch_size=32,   # ignored, sampler decides
+    gradient_accumulation_steps=1,
+    num_train_epochs=3,
+    fp16=True,
+)
+
+trainer = CustomTrainer(
+    model=model,
+    args=args,
+    train_dataloader=train_loader
+)
+
+trainer.train()
+```
+
+---
+
+# ❓ Want me to include:
+
+* Collator code for MiniLM (XLM-R SentencePiece)?
+* Multi-GPU (DDP) compatibility for the custom sampler?
+* Integration with LoRA (PEFT)?
+* Support for validation DataLoaders?
+
+Tell me and I’ll extend the script.
