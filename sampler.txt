@@ -1,3 +1,48 @@
+Personalized Calendar Events (Non-Promotional)
+
+User-linked, intent-driven, or explicitly added to the calendar.
+
+Personal_Meetings_Appointments: Doctor visits, office meetings, interviews, service appointments.
+
+Personal_Deadlines: Work submissions, exams, applications, tax or document deadlines.
+
+Personal_Travel_Plans: Flights, trains, hotel stays, vacations, business trips.
+
+Personal_Financial_Reminders: Rent, EMIs, utility bills, subscription renewals.
+
+Personal_Celebrations: Birthdays, weddings, anniversaries, family functions.
+
+Personal_Exams_Evaluations: School exams, interviews, certification tests.
+
+Personal_Ticketed_Events: Concerts, sports matches, conferences already booked.
+
+Promotional Calendar Events
+
+Discovery- or marketing-driven, not yet committed by the user.
+
+Event_Promotions: Concerts, festivals, exhibitions, conferences being advertised.
+
+Ticket_Sales_Alerts: Early-bird offers, last-minute deals, seat availability.
+
+Holiday_Festival_Promos: New Year events, cultural festivals, public celebrations.
+
+Learning_Event_Promotions: Webinars, workshops, bootcamps, online classes.
+
+Venue_Show_Promotions: Club nights, theater shows, comedy events.
+
+Travel_Event_Promos: Tour packages, cruise departures, group trips.
+
+Brand_Sponsored_Events: Product launches, mall events, sponsored meetups.
+
+
+
+
+
+
+
+
+
+
 import random
 from torch.utils.data import Sampler
 
