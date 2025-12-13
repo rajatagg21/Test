@@ -1,3 +1,18 @@
+Account_Follow_Invitations: Messages prompting users to follow an account or page for updates.
+
+Social_Channel_Subscription_Prompts: Requests to subscribe to social handles, channels, or communities.
+
+Brand_Page_Follow_Promotions: Promotions encouraging users to follow official brand pages.
+
+Creator_Account_Follow_Requests: Influencer or creator messages asking users to follow their account.
+
+CrossPlatform_Follow_Promotions: Invitations to follow the same brand on another platform.
+
+Community_Join_Promotions: Requests to join groups, forums, or broadcast lists.
+
+Reengagement_Follow_Prompts: Messages asking inactive users to follow to stay updated.
+
+
 PROMOTIONAL (Advertisement) – Opt-Out–Based Topics
 
 These exist to market, influence, or re-engage, and therefore require opt-out.
