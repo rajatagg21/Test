@@ -1,3 +1,41 @@
+PROMOTIONAL (Advertisement) – Opt-Out–Based Topics
+
+These exist to market, influence, or re-engage, and therefore require opt-out.
+
+Marketing_Broadcast_Messages: Mass promotional messages advertising products, services, or offers with STOP footer.
+
+Promotional_Subscription_Campaigns: Ongoing marketing streams users opted into, with unsubscribe to stop promotions.
+
+Brand_Reengagement_Alerts: Win-back, inactive-user, or loyalty nudges carrying opt-out text.
+
+Offer_And_Discount_Alerts: Coupons, sales, cashback, limited-time deals with mandatory unsubscribe clause.
+
+Promotional_Product_Announcements: New launches, feature promotions, cross-sell or upsell messages with STOP text.
+
+ThirdParty_Promotional_Messages: Partner or sponsored promotions sent under shared consent with opt-out footer.
+
+NON-PROMOTIONAL (Service / Transactional) – Opt-Out–Based Topics
+
+These exist to fulfill a service obligation, but still include opt-out due to regulation, platform, or consent rules.
+
+Consent_Governed_Service_Alerts: Service notifications sent under user consent that legally require opt-out language.
+
+Transactional_With_Compliance_Footer: Order, payment, or booking updates carrying STOP text due to channel rules.
+
+Subscription_Service_Notifications: Renewal, expiry, usage, or plan-change alerts with unsubscribe option.
+
+Regulatory_Required_Communications: Mandatory notices (policy, compliance, disclosures) with opt-out footer.
+
+Bulk_System_Service_Messages: High-volume system alerts (status, reminders) including standardized opt-out.
+
+Platform_Appended_OptOut_Messages: Messages where STOP text is auto-added by SMS/WhatsApp gateways.
+
+User_OptOut_Enabled_Service_Alerts: Service messages allowing users to stop future alerts via reply.
+
+
+
+
+
 Personalized Calendar Events (Non-Promotional)
 
 User-linked, intent-driven, or explicitly added to the calendar.
