@@ -1,3 +1,20 @@
+Conversation_Based_Group_Invites: One-to-one or small-group messages inviting someone to join a chat or group.
+
+Peer_Group_Addition_Requests: Requests from known contacts to add the user to an existing group.
+
+Workplace_Team_Invites: Invitations to join work, project, or internal collaboration groups.
+
+Community_Coordination_Invites: Informal invites to join neighborhood, hobby, or interest groups without marketing intent.
+
+Event_Participant_Groups: Requests to join temporary groups formed around shared activities or tasks.
+
+Contact_Network_Expansion: Personal requests to connect or stay in touch, not tied to brand promotion.
+
+Service_Support_Groups: Invitations to join support or help groups related to an ongoing issue or request.
+
+---------------
+
+
 Account_Follow_Invitations: Messages prompting users to follow an account or page for updates.
 
 Social_Channel_Subscription_Prompts: Requests to subscribe to social handles, channels, or communities.
