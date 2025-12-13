@@ -1,3 +1,58 @@
+negative_topics:
+  # Finance
+  - Market_News: Updates on stock indices, commodities, and global financial markets.
+  - Corporate_Earnings_Reports: Quarterly or annual company results and profit/loss announcements.
+  - Regulatory_Financial_Updates: Central bank decisions, policy changes, tax and compliance news.
+
+  # App Updates
+  - Feature_Release_Announcements: News about new app versions, functionalities, or enhancements.
+  - Maintenance_And_Outage_Reports: Informational updates on downtime or service disruptions.
+  - Security_And_Privacy_News: Reports on security patches, vulnerabilities, or privacy policy changes.
+
+  # Order and Delivery
+  - Logistics_News: Updates on supply chains, shipping trends, or industry developments.
+  - Product_Recall_Announcements: News regarding product recalls or safety issues.
+  - Retail_Market_Updates: Reports on operational, warehouse, or distribution developments.
+
+  # Events
+  - Public_Event_Announcements: News about festivals, conferences, or major gatherings.
+  - Schedule_And_Venue_Changes: Reports on rescheduled, canceled, or relocated events.
+  - Event_Highlights_Reports: Coverage of completed events, attendance stats, or notable outcomes.
+
+  # Accommodations
+  - Hotel_Industry_Updates: Openings, closures, renovations, or operational news in lodging.
+  - Travel_Regulatory_Advisories: Changes in booking rules, visa regulations, or lodging policies.
+  - Safety_And_Compliance_News: Inspection reports, safety audits, or regulatory alerts.
+
+  # Shopping
+  - Product_Launch_News: Announcements of new products or innovations.
+  - Retail_Market_Updates: Industry-wide trends, supply shortages, or consumer reports.
+  - Brand_Or_Store_Announcements: Operational updates or expansions of stores and brands.
+
+  # Entertainment
+  - Movie_And_Show_Announcements: Release dates, schedules, or casting news.
+  - Celebrity_Industry_News: Objective reports on awards, achievements, or public appearances.
+  - Media_Platform_Updates: News about content availability, platform expansions, or partnerships.
+
+  # Lifestyle
+  - Health_And_Wellness_News: Research findings, medical breakthroughs, or advisory updates.
+  - Travel_And_Tourism_News: Destination openings, advisories, or infrastructure updates.
+  - Community_Cultural_News: Reports on festivals, public programs, or social initiatives.
+
+  # Generic
+  - Government_Policy_News: Laws, regulations, or official government notifications.
+  - Weather_And_Disaster_News: Storms, earthquakes, or other natural events.
+  - Local_Community_News: Civic developments, local administration updates, or public services.
+
+
+
+
+
+
+
+
+
+
 Conversation_Based_Group_Invites: One-to-one or small-group messages inviting someone to join a chat or group.
 
 Peer_Group_Addition_Requests: Requests from known contacts to add the user to an existing group.
