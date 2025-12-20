@@ -1,3 +1,40 @@
+class TransformerClassifierHead(nn.Module):
+    def __init__(self, hidden_size, num_heads, num_labels, dropout=0.1):
+        super().__init__()
+
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=hidden_size,
+            nhead=num_heads,
+            dim_feedforward=hidden_size * 4,
+            dropout=dropout,
+            activation="gelu",
+            batch_first=True,
+            norm_first=True
+        )
+
+        self.transformer = nn.TransformerEncoder(
+            encoder_layer,
+            num_layers=1
+        )
+
+        self.classifier = nn.Sequential(
+            nn.Linear(hidden_size, 256),
+            nn.GELU(),
+            nn.LayerNorm(256),
+            nn.Dropout(0.2),
+            nn.Linear(256, num_labels)
+        )
+
+    def forward(self, hidden_states):
+        # [B, T, H]
+        hidden_states = self.transformer(hidden_states)
+        pooled = hidden_states.mean(dim=1)
+        return self.classifier(pooled)
+
+
+
+
+
 import torch
 import torch.nn as nn
 from transformers import AutoModel
