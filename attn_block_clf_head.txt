@@ -33,6 +33,26 @@ class TransformerClassifierHead(nn.Module):
 
 
 
+class MiniLMModel(nn.Module):
+    def __init__(self, model_name, num_labels, freeze_encoder=True):
+        super().__init__()
+
+        self.encoder = AutoModel.from_pretrained(model_name)
+
+        if freeze_encoder:
+            for p in self.encoder.parameters():
+                p.requires_grad = False
+
+        self.classifier = TransformerClassifierHead(
+            hidden_size=384,
+            num_heads=6,
+            num_labels=num_labels
+        )
+
+    def forward(self, input_ids):
+        outputs = self.encoder(input_ids=input_ids)
+        hidden_states = outputs.last_hidden_state
+        return self.classifier(hidden_states)
 
 
 import torch
