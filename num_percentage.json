@@ -1,0 +1,802 @@
+[
+  {
+    "text": "battery is at exactly 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % battery remaining on phone",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "only 10 % storage left now",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "download is at 10 % completion",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "save 10 % of your battery",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "humidity is down to 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % chance of rain today",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "the file is 10 % uploaded",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "increase brightness by 10 % please",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "cpu usage hit 10 % peak",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "only 10 % of people passed",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "system optimization is 10 % done",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of the data missing",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "set the volume to 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "glucose levels dropped 10 % today",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of storage is cache",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "accuracy improved by 10 % lately",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "video export reached 10 % progress",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of memory is free",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "reduce screen time by 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "the incline is at 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "only 10 % of the work remains",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of the battery used",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "set opacity to 10 % now",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "heart rate increased 10 % suddenly",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of voters have arrived",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "backup is 10 % complete tonight",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % more water is needed",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "the image is scaled 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % error rate during transfer",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "my 10 % tax bracket changed",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "efficiency is up by 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "only 10 % of charge left",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of the screen broke",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "signal strength dropped by 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of files are corrupted",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "compress the file by 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of contacts were duplicates",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "the zoom level is 10 %",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "10 % of users are offline",
+    "phrase": "10 %",
+    "word_limit": 6
+  },
+  {
+    "text": "phone battery just dropped to 10 % while recording",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the cloud backup progress is currently at 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of your monthly data has already been used",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the weather forecast shows only a 10 % chance rain",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "please save at least 10 % of your income weekly",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the storage cleanup is now finished",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "you need to increase your daily steps by 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the system update has reached 10 % after an hour",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "only 10 % of the team is working today",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the printer ink level is down to 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the available memory is allocated to system",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the student scored 10 % higher on the final exam",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "reduce the salt in this recipe by 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the marathon runners have reached the finish",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "your heart rate is 10 % above the resting average",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the image download is stuck at exactly 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "save 10 % of your phone space by deleting clips",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the apartment building is currently under renovation",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the brightness level should be around 10 % at night",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the forest was damaged by the storm",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "you have used 10 % of the allocated travel budget",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the video rendering process is only 10 % done",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the test group reported no side effects",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the mobile network coverage dropped by 10 % tonight",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the app says 10 % of my contacts are inactive",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the battery capacity is lost after year",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the project completion percentage is finally at 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the morning commute was spent in traffic",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the gradient fill is set to 10 % opacity",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the books in the library are digital",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the teacher expects a 10 % improvement in class participation",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the water in the tank leaked out",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the smartphone display is 10 % larger than the old",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the participants have already finished the survey",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the app update will reduce memory usage by 10 %",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the battery was drained by background apps",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the volume level should not exceed 10 % here",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the files were successfully moved to drive",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the population grew by 10 % in the last decade",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "10 % of the cake was eaten before the party",
+    "phrase": "10 %",
+    "word_limit": 10
+  },
+  {
+    "text": "the device is currently running with only 10 % of its processing power available for background system tasks tonight",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "please save at least 10 % of your monthly salary to cover any unexpected medical emergencies or home repairs",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the data transfer was completed before the internet connection dropped out during the heavy storm last night",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the doctor mentioned that a 10 % weight loss could significantly improve my overall blood pressure and heart health",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the cloud storage is currently being occupied by old system backups that we should probably delete soon",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the battery level notification just popped up saying i have only 10 % remaining so i should find a charger",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the students in the morning class were late because of the major delay on the blue line",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the recipe calls for a 10 % increase in flour if you are baking at a much higher altitude",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the survey respondents said they prefer working from home rather than going into the office every day",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the system diagnostic report shows a 10 % failure rate in the secondary memory sectors which might cause some lag",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the total marathon distance has been covered by the leading group of runners in under twenty minutes",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "please ensure that the image is scaled down by exactly 10 % before you upload it to the profile settings",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the battery life was saved today simply by turning off the high refresh rate on the screen",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the humidity levels in the greenhouse should stay within 10 % of the target to protect the delicate tropical plants",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the contacts on my phone were missing their area codes after the latest system software update",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the fitness app says i have reached 10 % of my weekly movement goal by walking to the grocery store",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the budget for the renovation project has been spent on basic materials like paint and floor tiles",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the download of the new operating system is still only at 10 % even though it has been an hour",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the people who attended the lecture stayed behind to ask the professor more detailed questions about research",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "you should reduce the brightness by 10 % to help reduce eye strain during your long study sessions at night",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the total file size consists of unnecessary metadata that can be removed to save a little space",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the system alert warned that 10 % of the cpu is being used by a single background browser tab",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the water in the reservoir has evaporated due to the extreme heat wave we are currently experiencing",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the teacher said that only 10 % of the grade will be based on class attendance throughout the entire semester",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the battery was consumed by the maps app while we were navigating through the city center today",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the report indicates that 10 % of the company assets are held in short term cash reserves for emergencies",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the phone screen is covered by the privacy protector which makes it look a little bit darker",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the data usage warning popped up because i used 10 % more than my daily average while watching videos",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the office staff decided to take the Friday off to enjoy the long weekend with their families",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the update progress bar is stuck at 10 % so i might need to restart the device to fix it",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the workout was dedicated to warming up the muscles before we started the heavy lifting phase",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the gardener recommended adding 10 % more organic compost to the soil to help the new vegetables grow faster",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the morning was spent answering urgent emails before i could finally start on the main project tasks",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the phone signal is 10 % stronger near the window compared to the middle of the basement apartment",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the battery drain occurred while the phone was in airplane mode during the five hour flight",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the volume was set to 10 % so i could barely hear the notification when the message finally arrived",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the total energy generated by the solar panels is stored in the backup battery for tonight",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the system settings show that 10 % of the storage is taken up by the operating system files themselves",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "10 % of the calories in this meal come from healthy fats according to the nutrition label on back",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the test results showed a 10 % margin of error which is within the acceptable range for this study",
+    "phrase": "10 %",
+    "word_limit": 20
+  },
+  {
+    "text": "the smartphone battery is currently at 10 % so please finish saving your files and connect the device to a power source before it shuts down completely during the update",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of your monthly data allowance has been consumed in just one day because of the high resolution video sync settings you enabled on your cloud storage app last night",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "please save at least 10 % of the space on your internal memory to ensure the system has enough room to process background tasks and install critical security patches without errors",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the participants in the health study reported a significant increase in their energy levels after they started drinking the recommended amount of water every single day for month",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the weather app says there is only a 10 % chance of rain tonight but you should probably bring an umbrella anyway just in case the storm moves in faster than expected",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the total time spent on the project was dedicated to researching the initial requirements and creating a detailed plan before any actual coding or design work began at all",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "you should aim to reduce your intake of processed sugars by at least 10 % this week to help stabilize your insulin levels and improve your focus during the long workday",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the cloud backup has been completed so far and the app estimates it will take another three hours to upload the remaining high definition videos from the trip",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the teacher mentioned that 10 % of the students failed to submit their homework on time this week which is a much higher rate than we usually see in this specific class",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the battery power was used by the navigation system during our drive to the mountains even though the screen was turned off for most of the three hour journey",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "please set the screen brightness to 10 % manually if the auto brightness feature is not working correctly in the dark room to avoid straining your eyes while reading the news",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the office building is currently restricted because of the ongoing maintenance work on the air conditioning system so please use the side entrance for the next two days",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the latest system diagnostic indicates that 10 % of the allocated ram is being used by a single background process that we should probably investigate and terminate to improve the performance",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the contacts in the shared address book appear to have duplicate entries with different phone numbers so we need to merge them to keep the list organized and clean",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "you can save up to 10 % of your battery life by disabling the always on display feature especially when you are out for the whole day without a portable charger",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the total distance of the hiking trail is very steep and rocky so make sure you are wearing proper boots and carrying enough water for the entire four hour",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the app store notification says that 10 % of my installed applications are out of date and need to be updated to fix security vulnerabilities and improve the overall system stability",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the tax revenue in our city is allocated to the maintenance of public parks and recreation areas which helps keep our neighborhood clean and green for the families",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "please reduce the volume of the alert by 10 % because it is currently a bit too loud and startles everyone in the quiet office whenever a new notification arrives today",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the morning commute was spent waiting at the train station because of a mechanical failure on the tracks that delayed all the inbound services by at least twenty",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the report shows that 10 % of the energy used by the household comes from renewable sources like the solar panels we installed on the roof of the garage last summer",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the storage on the memory card is occupied by hidden system files that are necessary for the camera to function correctly so do not try to delete them",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the doctor recommended that i increase my protein intake by 10 % to help with muscle recovery after the intensive training sessions i have been doing at the gym lately",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the files were skipped during the transfer because they were already present in the destination folder and the system was set to avoid creating any duplicate file versions",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the survey indicated that 10 % of users are still using an older version of the software which might not be compatible with the new security features we just launched today",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the battery capacity was used up while i was just listening to a podcast with the screen off during my hour long walk in the park this morning",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "please increase the font size by 10 % in the accessibility settings to make the text easier to read on the small screen of your smartphone without having to use glasses",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the budget for the upcoming trip has already been spent on the train tickets and the entry fees for the museum we plan to visit on first day",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the system update progress bar has been at 10 % for the last ten minutes so i am starting to think that the download might have actually frozen during the process",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the population in this area is over the age of sixty-five which is why the city decided to build more community centers and improve the local public transport",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "you can save about 10 % of your monthly grocery bill by planning your meals in advance and only buying the specific ingredients that you actually need for the whole week",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the total storage space on the server is reserved for emergency backups in case the main drive fails and we need to recover the most critical business data",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the fitness tracker says that 10 % of my steps today were actually taken while i was running to catch the bus so they count as high intensity exercise in report",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the images in the folder were blurred because the camera lens was slightly dirty so i need to clean it and retake the photos of the garden flowers",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the system settings allow you to limit the maximum charge to 10 % below the full capacity to extend the overall lifespan of the lithium battery inside your modern smartphone",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the total calories burned during the workout came from the high intensity interval training at the end of the session according to the data from my heart monitor",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "the study found that 10 % of the local bird species have migrated earlier than usual this year because of the unusually warm weather we have been having during the autumn",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the battery was drained while the phone was searching for a signal in the remote area of the woods where we were camping for the last two days",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "please scale the document by 10 % before printing to ensure that all the margins are correct and that none of the text is cut off at the edge of paper",
+    "phrase": "10 %",
+    "word_limit": 30
+  },
+  {
+    "text": "10 % of the people who signed up for the webinar actually showed up for the live session which is a bit disappointing considering the effort we put into the preparation",
+    "phrase": "10 %",
+    "word_limit": 30
+  }
+]

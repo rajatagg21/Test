@@ -1,0 +1,502 @@
+[
+  {
+    "text": "27-12-2025\n\nDear Rajat Aggarwal,\n\nHere's the summary of your Axis Bank Credit Card Transaction:\nTransaction Amount:\nINR 206.25\nMerchant Name:\nRELIANCE RE\nAxis Bank Credit Card No.\nXX3550\nDate & Time:\n27-12-2025, 10:08:13 IST\nAvailable Limit*: INR 147461.47\nTotal Credit Limit*: INR 171000\n*Limits include all linked cards. If not initiated by you, call 18001035577.",
+    "topic": "official_seed_payments",
+    "variation": "Credit Card Alert"
+  },
+  {
+    "text": "ICICI Bank: Transaction Alert. Your Bank Account XX1092 has been debited for INR 1,500.00 on 28-Dec-25. Merchant: ZOMATO PAY. Avl Bal: INR 45,230.10. Call 18002003344 for disputes.",
+    "topic": "official_seed_payments",
+    "variation": "SMS Debit"
+  },
+  {
+    "text": "HDFC Bank NetBanking\nRef ID: 882736155\nDear Customer, an amount of INR 12,499.00 was transferred to APPLE INDIA via IMPS. Date: 2025-12-28. If this was not you, block your account immediately on the app.",
+    "topic": "official_seed_payments",
+    "variation": "NetBanking Transfer"
+  },
+  {
+    "text": "UPI Transaction Success!\nAmount: ₹45.00\nTo: CHAI POINT\nFrom: SBI Bank (XX9981)\nTransaction ID: 554422119988\nTimestamp: 28 Dec 2025, 11:30 AM\nTrack your spends on the YONO app.",
+    "topic": "official_seed_payments",
+    "variation": "UPI App Push"
+  },
+  {
+    "text": "Dear Cardmember, OTP for transaction of USD 45.99 at AMAZON.COM on your Citibank Card XX4421 is 882109. Valid for 5 mins. Do not share OTP for security reasons.",
+    "topic": "official_seed_payments",
+    "variation": "OTP Notification"
+  },
+  {
+    "text": "Standard Chartered: Your credit card XX7721 was swiped for INR 5,600.00 at PHOENIX MALL. Avl Limit: INR 2,10,000. Report fraud to +912261230000.",
+    "topic": "official_seed_payments",
+    "variation": "POS Swiped"
+  },
+  {
+    "text": "Kotak Mahindra Bank\nTransaction Notification\nAccount: XX0022\nType: ATM Withdrawal\nAmount: INR 10,000.00\nLocation: NEW DELHI ATM 4\nDate: 28-12-2025\nAvl Bal: INR 12,440.00",
+    "topic": "official_seed_payments",
+    "variation": "ATM Withdrawal"
+  },
+  {
+    "text": "Amex Alert: Spent INR 45,000.00 at MAKE MY TRIP on Card ending 1005. Date: Dec 28. If you didn't do this, call the number on the back of your card.",
+    "topic": "official_seed_payments",
+    "variation": "Premium Card Alert"
+  },
+  {
+    "text": "YES BANK: Request for ₹2,300.00 received from MERCHANT_NAME via UPI. Funds will be deducted from A/c XX88. If not you, decline and report in app.",
+    "topic": "official_seed_payments",
+    "variation": "UPI Collect Request"
+  },
+  {
+    "text": "Transaction Confirmation\nBank: PNB\nMode: NEFT Outward\nBeneficiary: Landlord Services\nAmount: ₹18,000.00\nStatus: Processed\nUTR: PNBH253621109",
+    "topic": "official_seed_payments",
+    "variation": "NEFT Success"
+  },
+  {
+    "text": "IndusInd Bank: OTP for your online purchase at FLIPKART for INR 899.00 is 102934. Do not disclose this to anyone, including bank staff.",
+    "topic": "official_seed_payments",
+    "variation": "E-commerce OTP"
+  },
+  {
+    "text": "IDFC FIRST Bank: Rent payment of INR 25,000.00 charged to your FIRST Select Credit Card XX4433. Current Bal: INR 88,210.00. Help: 18602582000.",
+    "topic": "official_seed_payments",
+    "variation": "Recurring Charge"
+  },
+  {
+    "text": "Bank of Baroda: Your A/c XX2211 has been credited with INR 75,000.00 (Salary). Total Bal: INR 92,100.22. Thank you for banking with us.",
+    "topic": "official_seed_payments",
+    "variation": "Salary Credit"
+  },
+  {
+    "text": "Apple Pay: ₹1,200.00 paid to STARBUCKS using SBI Debit Card XX00. 28-Dec-2025, 08:45 AM. Dispute? Call 1800112211.",
+    "topic": "official_seed_payments",
+    "variation": "Digital Wallet"
+  },
+  {
+    "text": "Union Bank: SMS Banking. Balance for A/c XX993 is INR 5,433.00. Last transaction: Dr ₹200.00 at METRO QR.",
+    "topic": "official_seed_payments",
+    "variation": "Balance Enquiry"
+  },
+  {
+    "text": "RBL Bank: You spent INR 440.00 at JIO PREPAID on Card XX12. Avl Limit: INR 45,000. Not you? SMS BLOCK 12 to 5607011.",
+    "topic": "official_seed_payments",
+    "variation": "Utility Payment"
+  },
+  {
+    "text": "Canara Bank: Transaction of INR 2,500.00 on 28-12-25 15:20 at DMART. Avl Bal: INR 15,200. Help: 18004250018.",
+    "topic": "official_seed_payments",
+    "variation": "Grocery Transaction"
+  },
+  {
+    "text": "HSBC Alert: Online purchase of GBP 22.00 at STEAMGAMES on Card XX005. Conversion rates apply. Call +912266668888 for help.",
+    "topic": "official_seed_payments",
+    "variation": "Foreign Currency"
+  },
+  {
+    "text": "DBS digibank: Payment of ₹3,450.00 to AIRTEL POSTPAID successful. Ref: 221098334. View details in the 'Spends' section.",
+    "topic": "official_seed_payments",
+    "variation": "Mobile Bill"
+  },
+  {
+    "text": "Federal Bank: A/c XX887 debited for INR 500.00. ATM Fee. Avl Bal: INR 2,100.00. Contact branch for details.",
+    "topic": "official_seed_payments",
+    "variation": "Banking Fees"
+  },
+  {
+    "text": "Bank Statement Notice\nAccount: XX1122\nDescription: INTEREST CREDIT\nAmount: INR 450.00\nDate: 2025-12-28\nStatus: Cleared",
+    "topic": "official_seed_payments",
+    "variation": "Interest Credit"
+  },
+  {
+    "text": "JPMorgan Chase: Fraud Alert. Did you spend $1,200.00 at BEST BUY? Reply YES to confirm, NO to block.",
+    "topic": "official_seed_payments",
+    "variation": "US Fraud Alert"
+  },
+  {
+    "text": "Wells Fargo: Your check #502 for $450.00 was cashed on 12/27. Current Bal: $2,100.50.",
+    "topic": "official_seed_payments",
+    "variation": "Check Cashed"
+  },
+  {
+    "text": "Bank of America: Low Balance Warning. Your account XX88 is below $100. Current Balance: $44.20.",
+    "topic": "official_seed_payments",
+    "variation": "Balance Warning"
+  },
+  {
+    "text": "Citibank: Auto-pay for your Mortgage of $2,400.00 scheduled for 01-Jan. Ensure sufficient funds.",
+    "topic": "official_seed_payments",
+    "variation": "Auto-pay Notice"
+  },
+  {
+    "text": "Capital One: A new login was detected on your account at 10:05 PM from London, UK. If not you, change your password.",
+    "topic": "official_seed_payments",
+    "variation": "Security Alert"
+  },
+  {
+    "text": "Paytm Bank: Wallet topped up by ₹500.00 from HDFC Bank. New Wallet Balance: ₹1,240.00.",
+    "topic": "official_seed_payments",
+    "variation": "Wallet Top-up"
+  },
+  {
+    "text": "PhonePe: Payment to HPCL PETROL PUMP success. Amount: ₹2,500.00. Date: 28 Dec. UTR: 882736110.",
+    "topic": "official_seed_payments",
+    "variation": "Fuel Payment"
+  },
+  {
+    "text": "Google Pay: Transaction of ₹150.00 to SWIGGY successful. Transaction ID: CIC882736. Bank: Axis Bank.",
+    "topic": "official_seed_payments",
+    "variation": "Food Delivery"
+  },
+  {
+    "text": "Amazon Pay ICICI: Reward points earned for your transaction of INR 1,200.00 at BIG BASKET. Points: 24.",
+    "topic": "official_seed_payments",
+    "variation": "Rewards Alert"
+  },
+  {
+    "text": "SBI: Dear Customer, your KYC is pending. Dial 18001234 to update. Ignore if already done. Do not share personal info.",
+    "topic": "official_seed_payments",
+    "variation": "KYC Notice"
+  },
+  {
+    "text": "UCO Bank: Dividend of INR 200.00 from RELIANCE IND credited to your A/c XX441. Avl Bal: INR 4,500.00.",
+    "topic": "official_seed_payments",
+    "variation": "Dividend Credit"
+  },
+  {
+    "text": "Central Bank of India: Amount of INR 500.00 debited for SMS Charges for Q3. Balance: INR 1,200.00.",
+    "topic": "official_seed_payments",
+    "variation": "Maintenance Charge"
+  },
+  {
+    "text": "Karur Vysya Bank: Cash deposit of INR 50,000.00 at Branch #12. Avl Bal: INR 1,05,200.00. Ref: DEP8827.",
+    "topic": "official_seed_payments",
+    "variation": "Cash Deposit"
+  },
+  {
+    "text": "South Indian Bank: Your Debit Card XX99 has been blocked as per your request. To unblock, visit nearest branch.",
+    "topic": "official_seed_payments",
+    "variation": "Card Blocked"
+  },
+  {
+    "text": "Indian Bank: Transaction failed due to insufficient funds. Merchant: NETFLIX. Amount: INR 649.00. A/c: XX12.",
+    "topic": "official_seed_payments",
+    "variation": "Failure Alert"
+  },
+  {
+    "text": "Saraswat Bank: Payment of ₹1,200.00 to TATA SKY successful. Avl Bal: ₹8,900.00. Ref: B88273.",
+    "topic": "official_seed_payments",
+    "variation": "DTH Payment"
+  },
+  {
+    "text": "Bandhan Bank: Transaction Alert. Dr INR 2,000.00 at INDANE GAS. Balance: INR 14,000.00. Contact 18002588181.",
+    "topic": "official_seed_payments",
+    "variation": "Gas Booking"
+  },
+  {
+    "text": "AU Small Finance: You have used 90% of your Credit Limit on Card XX11. Avl: ₹5,000. Pay now to avoid fees.",
+    "topic": "official_seed_payments",
+    "variation": "Limit Exhaustion"
+  },
+  {
+    "text": "Karnataka Bank: Your FD #55221 has been renewed for 1 year. Principal: INR 1,00,000. Rate: 7.25%.",
+    "topic": "official_seed_payments",
+    "variation": "FD Renewal"
+  },
+  {
+    "text": "Barclays: Security Code for Login: 554109. If you did not request this, please call 0800 015 1234.",
+    "topic": "official_seed_payments",
+    "variation": "UK Login OTP"
+  },
+  {
+    "text": "Lloyds Bank: Your new Credit Card is on the way. Expected delivery: 30 Dec. Track in app.",
+    "topic": "official_seed_payments",
+    "variation": "Dispatch Notice"
+  },
+  {
+    "text": "Santander: Important. We have restricted your card XX99 following unusual activity at 'LUXURY WATCHES'. Call us.",
+    "topic": "official_seed_payments",
+    "variation": "Account Freeze"
+  },
+  {
+    "text": "PayPal: You sent $15.00 to 'Freelancer Services'. Transaction ID: 5H8827. Receipt sent to your email.",
+    "topic": "official_seed_payments",
+    "variation": "Payment Sent"
+  },
+  {
+    "text": "Venmo: You received $20.00 from 'Michael' for 'Dinner'. Cash out to your bank now.",
+    "topic": "official_seed_payments",
+    "variation": "Payment Received"
+  },
+  {
+    "text": "Zelle: 'Sarah' sent you $100.00. Funds are available in your Chase account XX12.",
+    "topic": "official_seed_payments",
+    "variation": "P2P Transfer"
+  },
+  {
+    "text": "Revolut: Exchange successful. 100.00 USD converted to 92.50 EUR. Fee: 0.00.",
+    "topic": "official_seed_payments",
+    "variation": "Currency Exchange"
+  },
+  {
+    "text": "Monzo: You've spent £4.50 at 'Pret A Manger'. That's £25.00 spent on Eating Out this week.",
+    "topic": "official_seed_payments",
+    "variation": "Spending Analytics"
+  },
+  {
+    "text": "Starling Bank: Incoming payment of £1,200.00 from 'HMRC'. Reference: TAX REFUND.",
+    "topic": "official_seed_payments",
+    "variation": "Tax Refund"
+  },
+  {
+    "text": "Discover: Monthly Statement for Card XX88 is ready. Min payment: $35.00 due by Jan 15.",
+    "topic": "official_seed_payments",
+    "variation": "Bill Due Notice"
+  },
+  {
+    "text": "SBI Card: Pay ₹12,400.00 by 30 Dec to avoid late fees. Total Due: ₹15,000.00. Use SBI Card App.",
+    "topic": "official_seed_payments",
+    "variation": "Due Reminder"
+  },
+  {
+    "text": "Equitas Bank: Your Micro-Loan A/c XX12 has been credited with INR 5,000.00. EMI starts 5 Jan.",
+    "topic": "official_seed_payments",
+    "variation": "Loan Disbursement"
+  },
+  {
+    "text": "Dhanlaxmi Bank: ATM PIN for your card XX44 changed successfully. If not you, block card at 18004251747.",
+    "topic": "official_seed_payments",
+    "variation": "PIN Change"
+  },
+  {
+    "text": "Catholic Syrian Bank: INR 200.00 debited from A/c XX11 for Cheque Book Request. Balance: INR 4,500.00.",
+    "topic": "official_seed_payments",
+    "variation": "Service Request"
+  },
+  {
+    "text": "Punjab & Sind Bank: Your A/c XX99 linked to UPI has been debited for ₹1,000.00 to 'DEALER'. Ref: 552109.",
+    "topic": "official_seed_payments",
+    "variation": "UPI Debit"
+  },
+  {
+    "text": "MobiKwik: Bill Payment of ₹999.00 for JIO FIBRE success. Cashback of ₹50 added to wallet.",
+    "topic": "official_seed_payments",
+    "variation": "Broadband Bill"
+  },
+  {
+    "text": "Freecharge: Successful recharge of ₹299.00 for Airtel Mobile. Transaction Ref: FC88273611.",
+    "topic": "official_seed_payments",
+    "variation": "Prepaid Recharge"
+  },
+  {
+    "text": "CRED: RentPay success. ₹15,000.00 transferred to landlord via IDFC Bank. 1000 CRED coins earned.",
+    "topic": "official_seed_payments",
+    "variation": "Rent Payment"
+  },
+  {
+    "text": "Slice: Repay your mini-bill of ₹1,200.00 by Jan 5th to keep your credit score healthy.",
+    "topic": "official_seed_payments",
+    "variation": "BNPL Repayment"
+  },
+  {
+    "text": "Uni Card: Monthly spend of ₹4,500.00 recorded. Your 1/3rd payment of ₹1,500.00 is due soon.",
+    "topic": "official_seed_payments",
+    "variation": "Installment Alert"
+  },
+  {
+    "text": "OneCard: Swiped for ₹20,000.00 at RELIANCE DIGITAL. 5X rewards activated on this category.",
+    "topic": "official_seed_payments",
+    "variation": "Electronics Purchase"
+  },
+  {
+    "text": "Bajaj Finserv: EMI of ₹2,499.00 for your Mobile Loan will be debited on 02-Jan. Keep balance.",
+    "topic": "official_seed_payments",
+    "variation": "EMI Reminder"
+  },
+  {
+    "text": "Niyo Global: ATM Withdrawal of 100.00 EUR in Paris. Zero Forex markup applied. Balance: ₹45,000.00.",
+    "topic": "official_seed_payments",
+    "variation": "International Travel"
+  },
+  {
+    "text": "Fi Money: You just saved ₹100.00 in your JAR. Total Savings: ₹12,400.00. Keep it up!",
+    "topic": "official_seed_payments",
+    "variation": "Savings Goal"
+  },
+  {
+    "text": "Jupiter: Payment of ₹50.00 to 'Street Vendor' via UPI. Bal: ₹1,240.00. Categorized as 'Street Food'.",
+    "topic": "official_seed_payments",
+    "variation": "P2M UPI"
+  },
+  {
+    "text": "Digio: Your E-Sign request for Loan Agreement is pending. Sign now to get funds in A/c XX44.",
+    "topic": "official_seed_payments",
+    "variation": "Document Signing"
+  },
+  {
+    "text": "Razorpay: Payment of ₹2,500.00 for 'Course Fees' to EDUTECH successful. ID: pay_882736.",
+    "topic": "official_seed_payments",
+    "variation": "Educational Fee"
+  },
+  {
+    "text": "BillDesk: Gas Bill of ₹1,050.00 paid for IGL. Reference No: BD8827361. Status: Success.",
+    "topic": "official_seed_payments",
+    "variation": "Gas Bill"
+  },
+  {
+    "text": "PayU: Refund of ₹499.00 from MYNTRA processed. Funds will reach source in 5-7 days.",
+    "topic": "official_seed_payments",
+    "variation": "Refund Processed"
+  },
+  {
+    "text": "Instamojo: You paid ₹1,500.00 to 'Yoga Workshop'. View your receipt here: mojo.sh/8827.",
+    "topic": "official_seed_payments",
+    "variation": "Workshop Payment"
+  },
+  {
+    "text": "CC Avenue: Payment of ₹10,400.00 to INDIGO AIRLINES for PNR: X88273 successful.",
+    "topic": "official_seed_payments",
+    "variation": "Flight Booking"
+  },
+  {
+    "text": "Merchant Alert: Your business account received ₹5,000.00 via GPay. Order ID: ORD102.",
+    "topic": "official_seed_payments",
+    "variation": "Merchant Inward"
+  },
+  {
+    "text": "TNG Wallet: Payment of HKD 20.00 at 7-ELEVEN. Remaining: HKD 145.00.",
+    "topic": "official_seed_payments",
+    "variation": "HK Wallet"
+  },
+  {
+    "text": "GrabPay: 15.00 SGD spent at 'Food Court'. Reward points earned: 30.",
+    "topic": "official_seed_payments",
+    "variation": "SG Digital Payment"
+  },
+  {
+    "text": "WeChat Pay: Transaction of 50.00 CNY to 'Taxi Service'. Avl Bal: 1,200.00 CNY.",
+    "topic": "official_seed_payments",
+    "variation": "CN Digital Payment"
+  },
+  {
+    "text": "Alipay: You paid 12.00 CNY for 'Breakfast'. Ref: 8827361109.",
+    "topic": "official_seed_payments",
+    "variation": "QR Payment"
+  },
+  {
+    "text": "Klarna: Your first payment of £20.00 for ASOS order is due in 3 days. Pay in app.",
+    "topic": "official_seed_payments",
+    "variation": "BNPL UK"
+  },
+  {
+    "text": "Afterpay: Payment successful. Your balance is now $45.00. Next payment due on 15 Jan.",
+    "topic": "official_seed_payments",
+    "variation": "BNPL US"
+  },
+  {
+    "text": "Affirm: Loan of $500.00 approved for 'Peloton'. Monthly payment: $45.00.",
+    "topic": "official_seed_payments",
+    "variation": "Loan Approval"
+  },
+  {
+    "text": "Robinhood: Dividend of $0.45 from 'AAPL' credited to your buying power.",
+    "topic": "official_seed_payments",
+    "variation": "Stock Dividend"
+  },
+  {
+    "text": "Coinbase: Your purchase of 0.001 BTC is complete. Funds debited from Bank XX12.",
+    "topic": "official_seed_payments",
+    "variation": "Crypto Purchase"
+  },
+  {
+    "text": "Binance: Withdrawal of 100.00 USDT initiated. If not you, disable account immediately.",
+    "topic": "official_seed_payments",
+    "variation": "Crypto Withdrawal"
+  },
+  {
+    "text": "Wealthfront: Monthly advisory fee of $5.20 debited from your Cash Account.",
+    "topic": "official_seed_payments",
+    "variation": "Advisory Fee"
+  },
+  {
+    "text": "Acorns: Round-up of $0.65 from 'Grocery' invested in your Portfolio.",
+    "topic": "official_seed_payments",
+    "variation": "Auto Investment"
+  },
+  {
+    "text": "Betterment: Your deposit of $200.00 is being processed. Expected arrival: 2 days.",
+    "topic": "official_seed_payments",
+    "variation": "Deposit Process"
+  },
+  {
+    "text": "Vanguard: 401(k) contribution of $500.00 confirmed for pay period ending 28-Dec.",
+    "topic": "official_seed_payments",
+    "variation": "Retirement Fund"
+  },
+  {
+    "text": "Fidelity: Trade executed. Sold 10 shares of MSFT at $375.20. Proceeds: $3,752.00.",
+    "topic": "official_seed_payments",
+    "variation": "Stock Sale"
+  },
+  {
+    "text": "Charles Schwab: Wire transfer of $5,000.00 received. Bal: $12,450.00.",
+    "topic": "official_seed_payments",
+    "variation": "Wire Inward"
+  },
+  {
+    "text": "TD Ameritrade: Margin call. Please deposit $1,200.00 to meet your requirements.",
+    "topic": "official_seed_payments",
+    "variation": "Margin Call"
+  },
+  {
+    "text": "E*TRADE: Your monthly statement is now available online. View your gains/losses.",
+    "topic": "official_seed_payments",
+    "variation": "Statement Alert"
+  },
+  {
+    "text": "Interactive Brokers: Account XX88 funded with $2,000.00 via ACH. Trade now.",
+    "topic": "official_seed_payments",
+    "variation": "ACH Deposit"
+  },
+  {
+    "text": "MetLife: Premium of $120.00 for Life Insurance paid. Next due: 28 Jan.",
+    "topic": "official_seed_payments",
+    "variation": "Insurance Premium"
+  },
+  {
+    "text": "Geico: Auto-pay of $85.00 processed for Policy #9921. Thank you.",
+    "topic": "official_seed_payments",
+    "variation": "Auto Insurance"
+  },
+  {
+    "text": "Progressive: Your payment of $200.00 failed. Update payment method to stay covered.",
+    "topic": "official_seed_payments",
+    "variation": "Payment Failed"
+  },
+  {
+    "text": "State Farm: Claim #8827 approved. Payment of $1,500.00 sent to your bank account.",
+    "topic": "official_seed_payments",
+    "variation": "Claim Approval"
+  },
+  {
+    "text": "Allstate: Renew your Home Insurance for $1,200.00/year. Policy expires in 10 days.",
+    "topic": "official_seed_payments",
+    "variation": "Policy Renewal"
+  },
+  {
+    "text": "LIC: Premium received for Policy 88273611. Amount: ₹5,400.00. Status: Active.",
+    "topic": "official_seed_payments",
+    "variation": "LIC Payment"
+  },
+  {
+    "text": "Star Health: Your claim for 'Hospitalization' is under review. Ref: STAR-8827.",
+    "topic": "official_seed_payments",
+    "variation": "Health Claim"
+  },
+  {
+    "text": "HDFC Ergo: ₹2,500.00 debited for Travel Insurance. PNR: 55410. Safe travels!",
+    "topic": "official_seed_payments",
+    "variation": "Travel Insurance"
+  },
+  {
+    "text": "PolicyBazaar: Payment of ₹8,000.00 for Term Life Policy success. Receipt in email.",
+    "topic": "official_seed_payments",
+    "variation": "Aggregator Payment"
+  }
+]

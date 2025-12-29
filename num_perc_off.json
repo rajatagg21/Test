@@ -1,0 +1,812 @@
+[
+  {
+    "text": "The battery dropped 10% off charger.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The plane was 10% off course.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Keep 10% off for backup storage.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Take 10% off the left margin.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off center makes it look better.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "I shaved 10% off my pace.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The brightness is 10% off max.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "My grade was 10% off target.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off duty nurses arrived now.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Knock 10% off the wait time.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Only 10% off the coast visible.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "He took 10% off the table.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off labels were peeled away.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The screen is 10% off tilt.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off peak hours are quieter.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Cut 10% off the video length.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Keep 10% off limits for kids.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The weight is 10% off tonight.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off the top is foam.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Wipe 10% off the dusty glass.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "His 10% off hand remark hurt.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off balance on the scale.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The data is 10% off calibration.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Trim 10% off the photo edges.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off road tires are noisy.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The audio is 10% off sync.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "I am 10% off the lead.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off base with that guess.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Scrape 10% off the cold surface.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off center works for me.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The pump is 10% off pressure.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Is the 10% off button active?",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Remove 10% off the bottom layer.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off scale on the map.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The signal is 10% off tonight.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The brew is 10% off flavor.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "10% off the grass area only.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "I was 10% off my estimate.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Drop 10% off the total volume.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "Stay 10% off the painted line.",
+    "phrase": "10% off",
+    "word_limit": 6
+  },
+  {
+    "text": "The battery percentage dropped 10% off the charger today.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I need to shave 10% off my personal best time.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off the student body volunteered for the park cleanup.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The compass was 10% off due to magnetic interference.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Please move the logo about 10% off the top edge.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off road driving requires specific tires and high suspension.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The humidity is finally 10% off the dangerous high level.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Keep 10% off the main road to avoid heavy traffic.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "My laptop storage is 10% off being completely full now.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "He stayed 10% off the pace during the entire marathon.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off duty officers were patrolling the local festival tonight.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I am 10% off target with my daily water intake.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The brightness should be 10% off the maximum setting here.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Knock 10% off the budget by removing the extra fees.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off center alignment looks much more artistic for photos.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The 10% off peak electricity rates start after midnight tonight.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Cut 10% off the wooden board to make it fit.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off limits for all staff during the system maintenance.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I lost 10% off the signal strength in the elevator.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Take 10% off the brightness to save your phone battery.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The weight reading was 10% off because of the carpet.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off the population still relies on traditional mail services.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I am 10% off finishing the data entry for work.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The 10% off axis tilt makes the architectural photo unique.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Remove 10% off the liquid before you add more flour.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off center text is harder to read for some.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I shaved 10% off the render time with new settings.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off the wall is where we should place it.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The sensor is 10% off compared to the manual gauge.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Keep 10% off your energy for the final sprint finish.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off balance sheet items were listed in the appendix.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I am about 10% off my projected savings goal now.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The pilot corrected the flight path after going 10% off.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off the crop was lost during the recent storm.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I need to take 10% off the volume of notifications.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off the total area is reserved for the garden.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The paint color is 10% off from the sample card.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "10% off duty staff members volunteered at the local shelter.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "Trim 10% off the edges of the digital image file.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "The project is still 10% off schedule despite our overtime.",
+    "phrase": "10% off",
+    "word_limit": 10
+  },
+  {
+    "text": "I accidentally knocked 10% off my battery life by keeping the flashlight on in my pocket all morning.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The research team found that being 10% off the target weight can significantly impact the long-term testing results.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the total storage space on my phone is currently taken up by system cache and temporary data.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "We noticed that the compass was 10% off because of the heavy iron deposit found in the rocks nearby.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off duty soldiers were invited to speak at the high school assembly about their time serving in the military.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The navigation system says we are 10% off our estimated arrival time because of the construction on the highway.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "Please adjust the projector lens as the image is currently about 10% off the screen on the right side.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I usually try to save 10% off every paycheck to build up my emergency fund for unexpected home repairs.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off limits is the rule for the construction zone while the heavy machinery is operating during work hours.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The brightness setting was 10% off from what I usually prefer for reading documents late at night on tablet.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the top of the cake was slightly burnt so I had to trim it before applying the icing.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "If you take 10% off the cooking time the vegetables will stay much crunchier and hold their flavor better.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off course is where the small boat ended up after the strong current pushed it during the night.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I am 10% off completing my daily steps goal so I might take a quick walk around the block.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The teacher said our group was 10% off in our calculations for the final physics experiment on gravitational force.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off road vehicles were gathered at the starting line of the desert race waiting for the official signal.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "You should trim 10% off the top of the hedge to allow more sunlight to reach the lower plants.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the proceeds from the charity run will be donated to the local library for new children books.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The patient vitals were 10% off the normal range so the nurse called the doctor for an immediate consultation.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I feel about 10% off today because I didn't get enough sleep after working on that big project late.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The budget was 10% off because we forgot to include the cost of the insurance for the office equipment.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off peak hours for the subway are much less crowded and easier for people traveling with large luggage.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I am 10% off finishing this thick novel and I really want to find out how the story ends.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The scale was 10% off until I recalibrated it using the standard weight provided in the box yesterday morning.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off duty staff members volunteered to help with the hospital garden during their personal time this weekend afternoon.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I noticed that the signal strength was 10% off when I moved my phone away from the window just.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off road trails are much more difficult to navigate than the paved paths through the national forest park.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I had to take 10% off the volume of the music because it was vibrating the walls too much.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the students were absent today because of the flu that has been going around the school lately.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The alignment of the door frame is 10% off making it very difficult to close and lock it properly.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off center is exactly where the artist wanted the focus of the portrait to be for this collection.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I am 10% off my target weight after three months of following the new fitness plan and healthy diet.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the total time spent on the project was just for the initial planning and research phase alone.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The machine output was 10% off today so we had to stop the production line and recalibrate the sensors.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the local population is expected to attend the parade in the city center this coming Saturday morning.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I took 10% off the brightness of my computer screen to help reduce my eye strain during work hours.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the wall is the recommended distance to hang the speakers for the best audio quality in here.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "The compass was 10% off after I dropped it in the stream during the hike earlier this afternoon today.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off the data points were excluded from the final study because they did not meet the quality criteria.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I am 10% off the pace compared to last week but I still feel very good about my progress.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "10% off center is the default setting for the margin on this specific document template I am using now.",
+    "phrase": "10% off",
+    "word_limit": 20
+  },
+  {
+    "text": "I decided to take 10% off my work hours this summer to spend more time with my family.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off duty police officers were recognized at the city council meeting for their heroic actions during the emergency that happened last month in the downtown area.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The technician said the sensor reading was 10% off because of the dust buildup inside the vent so he cleaned it thoroughly and then restarted the entire system again.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the total surface area of the park is dedicated to the new playground equipment which the kids in the neighborhood are really excited to use this weekend.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I noticed the battery level dropped 10% off the charger within just a few minutes of use which makes me think that the battery might finally be failing me.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The navigation app told us we were 10% off our route after we took a wrong turn at the construction site so we had to find a way back.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the residents in the building voted to change the color of the lobby walls but the majority preferred to keep the original beige color for now.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I had to trim about 10% off the top of the curtains because they were too long and were dragging on the floor after I installed the new rods.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off center is where the focus of the microscope was set which allowed us to see the edges of the cell much more clearly than before during the lab.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The weather forecast was 10% off today since it started raining two hours earlier than they predicted this morning so I got soaked while walking to the bus station.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off limits is the policy for the server room unless you have the specific security clearance and a valid reason to enter the area for emergency maintenance tasks.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I tried to knock 10% off the final cost by doing some of the labor myself but the contractor said it wouldn't change the overall price of the materials.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the proceeds from the bake sale at the school will be used to buy new sports equipment for the gym classes according to the student council announcement.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The scale at the gym was 10% off compared to my one at home which made me feel much lighter than I actually am for a few brief moments.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off road trails are located at the back of the property and are perfect for anyone who enjoys hiking in a more rugged and natural environment this summer.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I am 10% off my target heart rate during this workout session so I need to pick up the intensity a little bit to reach my fitness goal today.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off duty nurses from the local hospital were seen helping out at the community blood drive that was held in the town square early this morning on Saturday.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The image on the screen was 10% off the center line so I had to manually adjust the settings on the monitor to get it perfectly aligned for work.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off peak hours for water usage are encouraged by the city to help manage the overall demand during the hot summer months when everyone is watering their lawns.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I took 10% off the brightness on my phone and noticed that it stayed powered on for almost an extra hour today while I was out and about town.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the data was corrupted during the file transfer so I had to download the entire folder again from the cloud to make sure I had the correct versions.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The recipe was 10% off on the salt measurement which made the soup a little too salty for my taste but everyone else seemed to really enjoy it anyway.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the students in the class were rewarded for their perfect attendance during the first semester with a special lunch and extra time for recess on Friday afternoon.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I realized the project deadline was 10% off from what I had originally written in my calendar so I had to rush to finish the final report tonight.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off road biking is one of my favorite hobbies because it allows me to explore the nature trails and get some fresh air away from the busy city.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The alignment of the shelf was 10% off which made all the books tilt to one side until I fixed it with a small piece of folded paper underneath.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the population in the small town is expected to participate in the upcoming local election to choose the next mayor and the new city council members.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I am about 10% off finishing the laundry for the week but I ran out of detergent so I have to go to the store before I finish.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off duty paramedics were first on the scene of the accident and were able to provide critical care until the ambulance arrived a few minutes later that night.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The signal on the radio was 10% off which caused some static during my favorite song but it cleared up as I drove further down the hill toward home.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off center is the look I was going for with this abstract painting because I wanted to create a sense of movement and imbalance for the viewer.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I am 10% off my target weight but I am not going to give up now because I have worked too hard to get to this point today.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off the storage space on the external drive is reserved for the system recovery files just in case the main partition becomes corrupted and needs to be fixed.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I had to shave 10% off the width of the table legs to make it fit through the narrow doorway of my new apartment on moving day today.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off limits areas are clearly marked with red tape and signs so please make sure you stay within the designated paths for your own safety during the tour.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The calibration of the scale was 10% off which meant all the measurements for the chemistry experiment were incorrect and we had to start the entire process over again.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off duty staff volunteered to stay late and help with the emergency cleanup after the pipe burst in the basement and flooded the main storage area of office.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I am 10% off the lead in the race but I think I can catch up if I push myself a little harder during the final stretch of the track.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "10% off peak train fares are much more affordable for students and seniors who are looking to travel into the city for a day trip or for appointments.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "The brightness of the sun was 10% off what it was yesterday which made the solar panels produce a little less energy than they did during the previous afternoon.",
+    "phrase": "10% off",
+    "word_limit": 30
+  },
+  {
+    "text": "I am 10% off finishing the project and I am really looking forward to finally being able to take a well-deserved break and relax for a few days.",
+    "phrase": "10% off",
+    "word_limit": 30
+  }
+]

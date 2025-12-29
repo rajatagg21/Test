@@ -1,0 +1,1382 @@
+[
+  {
+    "text": "i have limited time for lunch",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time remains for the exam",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "data sync is limited this time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time left on the clock",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "my limited screen time is up",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "he had limited time to talk",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time available for deep cleaning",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "parking has limited time today only",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time allowed for visitor entry",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "save steps with limited study time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "there is limited time to reply",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time causes many mistakes here",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "i work with limited time daily",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time before the battery dies",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "only limited time for our visit",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time for backup to finish",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time for active heart rate",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time until the next train",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "we had limited time to park",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time for the system scan",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time remains for file recovery",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time to find a seat",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "i have limited time to cook",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time for the morning stretch",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "is our response time limited tonight",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited resources for this time period",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "access is limited at this time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "a limited view of time remaining",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited seating during the lecture time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "this limited storage impacts battery time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited range for the flight time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "power is limited during evening time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited results found at that time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited participation in the time trial",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited access to the system time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited mobility at this current time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "the limited scope of my time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited bandwidth throughout the entire time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "your limited visibility during night time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "limited growth for the harvest time",
+    "phrase": "limited time",
+    "word_limit": 6
+  },
+  {
+    "text": "there is limited time to complete the system diagnostic scan",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for charging before the long commute starts now",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "i have limited time to review these notes before class",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the server allows limited time for session inactivity before logout",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time was spent on the phone during the weekend",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "we have limited time to reach the station for departure",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time available to clear the cache and free memory",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "she has limited time to help with the budget tonight",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for the kids to use the tablet daily",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time remains to submit the final draft of work",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "due to limited time we only visited the main gallery",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for syncing high resolution photos over cellular data",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "his schedule shows limited time for meetings this Friday morning",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the backup failed because of limited time in the window",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time left on the parking meter near the park",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for the presentation was a major stress factor",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the device has limited time to find a signal here",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "i allocated limited time for grocery shopping this afternoon only",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time allowed for visitor access to the hospital wing",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "we spent limited time checking the files for missing data",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for the solar panels to collect peak energy",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the runner had limited time to finish the five kilometer",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for questions will be given after the lecture",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "i need to save steps given the limited time today",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for the paint to dry before it rains",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the pilot warned of limited time for the safe landing",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time to grab the bag before the doors close",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the chef had limited time to prepare the entire meal",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited time for the flowers to receive direct sunlight daily",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "the battery level provides limited time for recording video footage",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "i used limited data the last time i checked today",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "my thinking is limited about the time we have left",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "it was a limited display of time for the workout",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited progress was made during the study time tonight",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "system access is limited during the scheduled maintenance time",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "visibility is limited because the time for fog has arrived",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "only limited background tasks run during the sleep time",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "limited parking is available at this time in the garage",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "our options are limited when the time is so short",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "your editing rights are limited for a short time",
+    "phrase": "limited time",
+    "word_limit": 10
+  },
+  {
+    "text": "due to limited time we should only focus on the critical security updates for our office network this afternoon",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i only have limited time to finish these twenty math problems before the teacher collects the homework from everyone",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the heart rate monitor to calibrate during your morning run can lead to inaccurate fitness data",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the cloud backup service has limited time to sync files before the computer enters sleep mode for the night",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time was available for the doctor to review the twenty lab results before the patient arrived for the consultation",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "we spent limited time at the museum because we had to catch the evening flight back to the city",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the app provides limited time for users to enter their password before the secure session expires and locks automatically",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time remains for you to save your progress in the game before the server shuts down for maintenance",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to organize my contacts and delete the duplicate phone numbers from my old sim card",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the budget review means we must only look at the highest expenses for the past month",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "there is limited time for the battery to reach a full charge before your long flight across the ocean",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the fitness app reminds me that i have limited time to reach my goal of ten thousand steps today",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the students to pack their bags before the school bus arrives at the main gate area",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to find the missing file on my hard drive before the project meeting starts today",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the group to finish the research paper was the biggest challenge we faced during this semester",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the notification stated that i have limited time to update my system software to avoid any potential security risks",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "we have limited time to explore the city center before the rain starts according to the latest weather forecast",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the morning commute means i have to leave the house at six to avoid the traffic",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the chef warned that there is limited time to serve the twenty plates before the food gets cold tonight",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the gardener to prune the trees before the winter frost sets in across the entire valley",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to save my documents to the external drive before i return the borrowed laptop computer",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the technician to repair the broken server before the office opens for business on Monday morning",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "due to limited time the coach decided to skip the warm up exercises and start the practice match immediately",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to find twenty unique contacts to invite to the surprise party i am planning now",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the baby to sleep before the loud neighbors start their home renovation project next door again",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "there is limited time for the coffee to stay hot in this cup while i am working on reports",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the train to stay at the platform means you must board the car quickly with bags",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the student had limited time to memorize the twenty vocabulary words before the test began at the school today",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the paint to dry before we can move the furniture back into the living room area",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to check the battery health on my phone before the warranty expires later this month",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the driver to find a gas station before the fuel tank is completely empty tonight",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "we spent limited time discussing the budget because the main project deadline was approaching much faster than we expected",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the pilot to communicate with the tower before the plane entered the area of heavy turbulence",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to clean the memory and delete old videos before i start recording the school play",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the hikers to reach the summit before the sun sets behind the large mountain range nearby",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the doctor has limited time to see twenty patients today because of the emergency meeting at the hospital later",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the software to compile before the power went out during the heavy thunderstorm in the area",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "i have limited time to find a seat on the bus because it is very crowded during the afternoon",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "limited time for the kids to finish their dinner before the movie starts at the local theater downtown tonight",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "the application allows limited time for the file download to complete before it cancels the operation to save data",
+    "phrase": "limited time",
+    "word_limit": 20
+  },
+  {
+    "text": "because we have limited time before the office closes i will quickly save all the recent edits to the shared folder and then log out of the system",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the battery optimization feature is enabled because there is limited time to find a charging station while you are traveling through the remote mountains without any power outlets",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "i have limited time to organize these twenty project files and sync them to the cloud before the client arrives for our scheduled morning presentation at the office today",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time was spent on the initial draft of the report so please review the text carefully for any grammatical errors or missing data points before you print it",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the system update was postponed because there was limited time to complete the twenty minute installation process before the scheduled network maintenance window began for the entire building",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "we only have limited time to explore the historic district during our layover so we should focus on seeing the twenty most famous landmarks listed in our travel guide book",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the teacher warned that students have limited time to finish their notes and clear their desks before the final exam papers are distributed to everyone in the classroom this morning",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the memory cleanup means i can only delete the twenty largest video files today instead of organizing the entire photo gallery on my smartphone as i planned",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "i need to save time on my commute since i have limited time to prepare for the job interview that starts in exactly twenty minutes at the city center office",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the app warns that you have limited time to enter the verification code sent to your phone before it expires for security reasons and requires you to request a new",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the heart rate monitor to sync with the fitness tracker resulted in a gap in the activity data for the first twenty minutes of my morning workout",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "she has limited time to manage her personal budget this week so she is using an app to automatically track her expenses and save steps in the accounting process daily",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the gardener to water the twenty different types of plants in the nursery before the temperature rises too high during the heatwave this afternoon in the valley",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the flight attendant mentioned there is limited time to use the overhead bins so please store your smaller bags under the seat to save space for other passengers boarding now",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "i have limited time to check my emails and reply to the twenty most urgent messages before the plane takes off and i lose my internet connection for several hours",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the system to recover from the crash meant that some files were not saved properly and we had to rely on the latest backup from the cloud",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the coach said we have limited time to practice our twenty different plays before the tournament begins next weekend so we need to stay focused and avoid any unnecessary distractions",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the sun to reach the solar panels on the roof means we must optimize our energy usage during the middle of the day to save power later",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "i have limited time to scan twenty old photos and save them to my digital archive before the library closes its media center for the upcoming holiday weekend break today",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the bus driver announced that there is limited time for the scheduled stop so please return to your seats within twenty minutes so we can continue the journey on time",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time was given for the public to comment on the new traffic regulations so we must submit our feedback regarding the twenty proposed changes before the deadline tonight at",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the device enters a low power state when there is limited time before the battery reaches zero percent to ensure that critical system information is not lost during the shutdown",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "i have limited time to find the twenty missing pieces of the puzzle before the party starts and the children arrive to play in the living room this afternoon",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the students to finish the twenty question quiz meant that many were unable to review their answers before the bell rang at the end of the period",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the chef noted that there is limited time to marinate the meat if we want to serve the twenty guests by seven o’clock so we should start the preparation now",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "limited time for the satellite signal to lock onto your location was caused by the heavy tree cover and the twenty story buildings surrounding the park where you are standing",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "system resources are limited this time around so the backup might take longer than thirty minutes to complete if you have many high resolution photos stored in the cloud vault",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "my ability to focus is limited every time i try to work in this noisy cafe so i should probably find a quieter place to finish my final project paper tonight",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "access to the server room is limited during the time that the security team is performing their annual audit of the hardware and software systems located in the main data center",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "her role in the play was limited for the time being because she had to miss several rehearsals due to a personal emergency that required her to travel out of town",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the scope of the study was limited at the time of publication but the researchers plan to expand their findings by collecting more data from at least twenty different urban cities",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "because storage is limited for the time being the app will automatically delete any temporary cache files that are older than thirty days to ensure the device continues to run smoothly",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "your involvement in the project is limited during the time you are on medical leave so please hand over all your current tasks to the designated team leader by five o'clock",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "visibility was limited at the time the accident occurred because of the heavy rainfall and the twenty mile per hour winds that were blowing across the coastal highway near the beach",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "parking space is limited during the time the festival is taking place so the city council suggests that all visitors use the shuttle buses parked at the twenty designated locations",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {
+    "text": "the amount of water is limited at this time of year so the local government has asked all residents to reduce their consumption by at least twenty percent starting this week",
+    "phrase": "limited time",
+    "word_limit": 30
+  },
+  {"text": "Check the invoice from Apex Logistics Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Contact details for Beacon Media Limited updated.", "phrase": "limited", "word_limit": 10},
+  {"text": "Is Global Tech Limited hiring right now?", "phrase": "limited", "word_limit": 10},
+  {"text": "I sent the files to Zenith Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Review the contract for Horizon Services Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Meeting with North Star Limited at ten.", "phrase": "limited", "word_limit": 10},
+  {"text": "Summit Energy Limited sent a new bill.", "phrase": "limited", "word_limit": 10},
+  {"text": "Save the address for Delta Trading Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Blue Marble Limited is on the list.", "phrase": "limited", "word_limit": 10},
+  {"text": "Forward the email to Sterling Group Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Does Orion Research Limited have my number?", "phrase": "limited", "word_limit": 10},
+  {"text": "Check for mail from Vector Systems Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Titan Construction Limited finished the site work.", "phrase": "limited", "word_limit": 10},
+  {"text": "Add Silver Oak Limited to your contacts.", "phrase": "limited", "word_limit": 10},
+  {"text": "Call the office at Prime Retail Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Your deposit from Capital Wealth Limited cleared.", "phrase": "limited", "word_limit": 10},
+  {"text": "Update the records for Atlas Engineering Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "I am working at Iron Bridge Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "The report for Nexus Global Limited is done.", "phrase": "limited", "word_limit": 10},
+  {"text": "Visit the website for Swift Courier Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Found a receipt from Urban Living Limited.", "phrase": "limited", "word_limit": 20},
+  {"text": "Did you receive the 20 digital assets from Creative Pulse Limited for the final project today?", "phrase": "limited", "word_limit": 20},
+  {"text": "Please save these 20 contacts under the new folder for Coastal Development Limited and sync them to the cloud.", "phrase": "limited", "word_limit": 20},
+  {"text": "The payroll from Midland Industry Limited has been processed for the last twenty employees on the staff list.", "phrase": "limited", "word_limit": 20},
+  {"text": "I noticed that twenty files are missing from the shared drive belonging to Pacific Maritime Limited.", "phrase": "limited", "word_limit": 20},
+  {"text": "You have a scheduled call with the team from Visionary Software Limited to discuss the system bugs.", "phrase": "limited", "word_limit": 20},
+  {"text": "The maintenance crew from Peak Property Limited will be arriving at the building in about twenty minutes.", "phrase": "limited", "word_limit": 20},
+  {"text": "Check if the insurance policy from Guardian Life Limited covers the equipment we purchased for the office.", "phrase": "limited", "word_limit": 20},
+  {"text": "We need to verify the tax ID for Emerald Export Limited before we can process their pending payment.", "phrase": "limited", "word_limit": 20},
+  {"text": "A new message from West End Limited regarding the delivery of your twenty packages has been received.", "phrase": "limited", "word_limit": 20},
+  {"text": "I am looking at the portfolio of Dynamic Venture Limited to see how they manage their technology investments.", "phrase": "limited", "word_limit": 20},
+  {"text": "The legal department at Thorne and Associates Limited needs you to sign these documents by the end of today.", "phrase": "limited", "word_limit": 20},
+  {"text": "Can you check the storage space available for the backup of files from Oak Valley Limited?", "phrase": "limited", "word_limit": 20},
+  {"text": "I sent an invite to twenty delegates from the International Trade Limited group for our seminar next month.", "phrase": "limited", "word_limit": 20},
+  {"text": "The battery on my laptop is low while I am trying to finish this presentation for Kinetic Motion Limited.", "phrase": "limited", "word_limit": 20},
+  {"text": "Review the environmental impact statement provided by Green Planet Limited for the proposed site in the north.", "phrase": "limited", "word_limit": 20},
+  {"text": "My commute was delayed by twenty minutes because of the construction work near the entrance of Bridge Way Limited.", "phrase": "limited", "word_limit": 20},
+  {"text": "The financial audit for Crescent Moon Limited is expected to take about twenty days to complete.", "phrase": "limited", "word_limit": 20},
+  {"text": "We are waiting for a response from the board of directors at Unity Health Limited regarding the new policy.", "phrase": "limited", "word_limit": 20},
+  {"text": "Please confirm the flight times for the representatives arriving from Galaxy Aerospace Limited this afternoon.", "phrase": "limited", "word_limit": 20},
+  {"text": "The system at Secure Data Limited will be offline for maintenance for twenty minutes starting at midnight tonight.", "phrase": "limited", "word_limit": 30},
+  {"text": "I have limited battery life left to finish reading the twenty page document sent over by the legal team at Alpha Consulting Limited earlier this morning.", "phrase": "limited", "word_limit": 30},
+  {"text": "Please make sure to save the updated budget sheet for River Stone Limited in the folder that contains all our financial records for the current fiscal year.", "phrase": "limited", "word_limit": 30},
+  {"text": "We need to clear the cache and delete twenty temporary files to ensure the application for Matrix Solutions Limited runs smoothly during the live demo.", "phrase": "limited", "word_limit": 30},
+  {"text": "I am trying to sync my contacts with the directory from Phoenix Enterprises Limited so that I can call their twenty regional managers more easily.", "phrase": "limited", "word_limit": 30},
+  {"text": "The travel itinerary for the trip to visit the headquarters of Crystal Clear Limited has been updated with the new flight and hotel details.", "phrase": "limited", "word_limit": 30},
+  {"text": "Check the data usage on your phone while downloading the large technical manuals provided by the engineering team at Solar Tech Limited yesterday.", "phrase": "limited", "word_limit": 30},
+  {"text": "I have twenty reminders on my phone to follow up with the logistics coordinator at Global Supply Limited regarding our delayed shipment of parts.", "phrase": "limited", "word_limit": 30},
+  {"text": "The screen time on my device increased because I spent over twenty hours this week researching the corporate structure of Legacy Holdings Limited.", "phrase": "limited", "word_limit": 30},
+  {"text": "Make sure to backup your notes from the meeting with the representatives of Frontier Research Limited before you reset your device to factory settings.", "phrase": "limited", "word_limit": 30},
+  {"text": "Is Bytecode Tech Limited still hiring?", "phrase": "limited", "word_limit": 6},
+  {"text": "Contact Silicon Systems Limited for support.", "phrase": "limited", "word_limit": 6},
+  {"text": "Data flow from Cloud Limited stopped.", "phrase": "limited", "word_limit": 6},
+  {"text": "Review the invoice from Ledger Limited.", "phrase": "limited", "word_limit": 6},
+  {"text": "Equity Group Limited sent a statement.", "phrase": "limited", "word_limit": 6},
+  {"text": "Meeting at Capital Trust Limited today.", "phrase": "limited", "word_limit": 6},
+  {"text": "Check the API from Dev Limited.", "phrase": "limited", "word_limit": 6},
+  {"text": "Asset Management Limited updated their terms.", "phrase": "limited", "word_limit": 6},
+  {"text": "Save contact for FinTech Solutions Limited.", "phrase": "limited", "word_limit": 6},
+  {"text": "Open files from Secure Bank Limited.", "phrase": "limited", "word_limit": 6},
+  {"text": "The server at Quantum Computing Limited is currently down for maintenance.", "phrase": "limited", "word_limit": 10},
+  {"text": "I need to call the advisor at Wealth Partners Limited.", "phrase": "limited", "word_limit": 10},
+  {"text": "Please verify the transaction from Global Payments Limited right now.", "phrase": "limited", "word_limit": 10},
+  {"text": "The developer from Logic Tech Limited pushed a new update.", "phrase": "limited", "word_limit": 10},
+  {"text": "Does Venture Capital Limited have the latest version of notes?", "phrase": "limited", "word_limit": 10},
+  {"text": "Update the security settings for the Silver Bank Limited app.", "phrase": "limited", "word_limit": 10},
+  {"text": "The report from Digital Assets Limited shows twenty percent growth.", "phrase": "limited", "word_limit": 10},
+  {"text": "We are migrating data to the Cloud Infrastructure Limited servers.", "phrase": "limited", "word_limit": 10},
+  {"text": "Forward the budget spreadsheet to Prime Finance Limited for review.", "phrase": "limited", "word_limit": 10},
+  {"text": "Check the sync status for the Core Tech Limited folder.", "phrase": "limited", "word_limit": 10},
+  {"text": "I have limited time to review the twenty code snippets sent by the lead engineer at Bitwise Limited.", "phrase": "limited", "word_limit": 20},
+  {"text": "The financial forecast from Sterling Securities Limited suggests we save twenty percent of our operating budget for next year.", "phrase": "limited", "word_limit": 20},
+  {"text": "Please backup the twenty database files from the server at Unified Tech Limited before the system migration begins tonight.", "phrase": "limited", "word_limit": 20},
+  {"text": "The representative from Merchant Bank Limited called to discuss the twenty pending transactions on our business account this morning.", "phrase": "limited", "word_limit": 20},
+  {"text": "Review the technical documentation from Nano Tech Limited regarding the twenty new security protocols they implemented on the network.", "phrase": "limited", "word_limit": 20},
+  {"text": "I need to organize the twenty contacts from Apex Financial Limited before the meeting starts at the office today.", "phrase": "limited", "word_limit": 20},
+  {"text": "The app from Secure Tech Limited is using twenty percent of my battery because of the background data sync.", "phrase": "limited", "word_limit": 20},
+  {"text": "Can you check if the twenty cloud storage invites from Enterprise Solutions Limited have been accepted by the team?", "phrase": "limited", "word_limit": 20},
+  {"text": "The audit from National Audit Limited found twenty missing entries in the ledger for the month of July.", "phrase": "limited", "word_limit": 20},
+  {"text": "We are waiting for the twenty software licenses to be issued by Creative Software Limited before we start the project.", "phrase": "limited", "word_limit": 20},
+  {"text": "I noticed twenty failed login attempts on the system at Cyber Shield Limited so please change your password and save the changes.", "phrase": "limited", "word_limit": 30},
+  {"text": "The battery usage report shows that the trading application from Market Data Limited has been running for over twenty hours in the background today.", "phrase": "limited", "word_limit": 30},
+  {"text": "Please sync the twenty documents from the folder labeled Investment Holdings Limited to your tablet so you can review them during the flight.", "phrase": "limited", "word_limit": 30},
+  {"text": "The technician from Broadband Tech Limited will be here in twenty minutes to check the connection issues we reported for our office branch.", "phrase": "limited", "word_limit": 30},
+  {"text": "We need to save the twenty contact profiles for the board members at Heritage Bank Limited into the secure database before the end of the day.", "phrase": "limited", "word_limit": 30},
+  {"text": "The software update from Systemic Tech Limited requires twenty gigabytes of free space on the drive so please delete some old files before starting.", "phrase": "limited", "word_limit": 30},
+  {"text": "I have twenty reminders on my calendar to follow up with the accounting department at Blue Chip Limited regarding the tax forms.", "phrase": "limited", "word_limit": 30},
+  {"text": "The data usage on the business plan for Silicon Valley Tech Limited has reached twenty gigabytes so please switch to the local wireless network.", "phrase": "limited", "word_limit": 30},
+  {"text": "You should backup the twenty architectural drawings from the server at Design Tech Limited to ensure that no data is lost during the power outage.", "phrase": "limited", "word_limit": 30},
+  {"text": "The legal team at Corporate Law Limited needs us to review the twenty clauses in the new contract before we sign it tomorrow afternoon.", "phrase": "limited", "word_limit": 30},
+  {"text": "The transaction for twenty thousand dollars from Bridge Finance Limited has been flagged for manual review by the system security team.", "phrase": "limited", "word_limit": 30},
+  {"text": "I am trying to organize the twenty project folders for Global Tech Limited but the storage on my device is almost completely full.", "phrase": "limited", "word_limit": 30},
+  {"text": "The network speed at Data Stream Limited is only twenty megabits per second which is making it very difficult to download the large files.", "phrase": "limited", "word_limit": 30},
+  {"text": "Please send the twenty updated resumes to the human resources department at Talent Tech Limited so they can begin the interview process.", "phrase": "limited", "word_limit": 30},
+  {"text": "The cloud sync for the twenty presentation slides from Visionary Tech Limited is taking longer than expected because of the slow internet connection.", "phrase": "limited", "word_limit": 30},
+  {"text": "I have twenty new emails from the support desk at Network Solutions Limited regarding the server downtime that occurred during the night.", "phrase": "limited", "word_limit": 30},
+  {"text": "The memory cleanup tool found twenty redundant files from the application created by Innovative Tech Limited that can be safely deleted.", "phrase": "limited", "word_limit": 30},
+  {"text": "We need to verify the twenty bank account numbers for the vendors at Global Trade Limited before we can issue the payments.", "phrase": "limited", "word_limit": 30},
+  {"text": "The system diagnostic at Tech Support Limited will take twenty minutes to run and will check for any hardware errors on your laptop.", "phrase": "limited", "word_limit": 30},
+  {"text": "Please save the twenty digital certificates from the security portal at Trust Tech Limited to your encrypted drive for future use.", "phrase": "limited", "word_limit": 30},
+  {
+    "text": "Transfer twenty to Equity Partners Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Check statements from Sterling Bank Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Contact Peak Asset Management Limited now.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Is Global Trust Limited still open?",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Save address for Prime Finance Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Review the Ledger from Capital Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Call the brokers at Heritage Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Found a receipt from Wealth Limited.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Bridge Securities Limited updated their policy.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Apex Trading Limited processed the deposit.",
+    "phrase": "Limited",
+    "word_limit": 6
+  },
+  {
+    "text": "The transaction from Blue Chip Limited is still pending today.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Please update your bank details for Crest Financial Limited immediately.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "I received twenty digital invoices from Summit Holdings Limited yesterday.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The quarterly report for Merit Investment Limited is finally ready.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Does North Star Limited have our current tax ID saved?",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Contact the compliance officer at Beacon Insurance Limited about files.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The payroll from Midland Group Limited will clear by twenty.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Review the twenty budget line items for Urban Realty Limited.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Save the contact info for Delta Credit Limited right now.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "I am looking at the portfolio from Zen Capital Limited.",
+    "phrase": "Limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The wire transfer from Pacific Trade Limited has been flagged for a manual security check by the twenty accountants.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I have limited time to review the twenty financial statements sent over by the team at Crystal Wealth Limited.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please save the twenty new vendor profiles for Iron Gate Limited into the accounting system before the next audit.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The auditor from Silver Oak Limited asked for the twenty missing receipts from the project travel expenses last month.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I need to call the mortgage advisor at Unity Home Limited regarding the twenty percent down payment for the site.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The fund manager at Alpha Venture Limited suggested we save twenty percent of the dividends for the next fiscal year.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Verify the bank account details for Emerald Export Limited before processing the twenty pending wire transfers later this afternoon.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The battery on my phone is low while checking the stock prices for Horizon Global Limited on the finance app.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "We need to clear the browser cache before logging into the portal for Secure Trust Limited to see the twenty accounts.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The insurance claim for the office equipment was filed through Guardian Life Limited and should be processed in twenty days.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I spent twenty hours this week organizing the tax documents for Legacy Holdings Limited and syncing them to the cloud drive.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Check if the twenty digital certificates from Thorne Financial Limited have been saved to the encrypted drive for the annual review.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The budget for the twenty new workstations at Delta Systems Limited has been approved by the board of directors today.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Sync the twenty contact files from the partnership with Metro Bank Limited so we can update the internal mailing list.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The technical report from Quest Finance Limited shows a twenty percent increase in data usage for the new mobile application.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I am waiting for the twenty monthly bank statements from Prime Retail Limited to complete the reconciliation for the quarter.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The financial forecast provided by Orion Research Limited includes twenty key metrics that we need to monitor for the project.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please backup the twenty spreadsheets from the server at Venture Capital Limited before the scheduled system maintenance begins tonight.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The representative from Merchant Bank Limited called to discuss the twenty suspicious transactions that were flagged on our corporate card.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Review the twenty legal clauses in the agreement with Corporate Law Limited to ensure we are following all financial regulations.",
+    "phrase": "Limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please save the twenty PDF invoices from North Star Limited into the finance folder and sync them to the server so the auditors can see them.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The accounting software update for Matrix Finance Limited requires at least twenty gigabytes of free disk space to complete the installation process for all users on the network.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I have twenty reminders on my phone to check the balance of the twenty different sub-accounts managed by the wealth team at Sterling Group Limited before the market closes.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The data usage on my phone reached twenty percent of the limit while I was downloading the twenty page annual report from International Trade Limited during my morning commute.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The system at Secure Data Limited will be offline for twenty minutes tonight to update the security protocols for the twenty thousand customer files stored in our private cloud.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "We need to clear the memory and delete twenty temporary files from the bank app belonging to Apex Financial Limited to fix the login errors we are seeing today.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I noticed twenty failed login attempts on the corporate account at Cyber Shield Limited so please update your twenty passwords and save the new ones in the vault.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The financial audit for Crescent Moon Limited is expected to take at least twenty days and will involve reviewing twenty different ledgers across our three main office locations.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "Please confirm the travel times for the twenty representatives arriving from Galaxy Finance Limited so we can book the twenty taxis needed to get them to the headquarters.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I have limited time to organize the twenty project files for Global Tech Limited before the board meeting begins at exactly twenty minutes past ten in the conference room.",
+    "phrase": "Limited",
+    "word_limit": 30
+  },
+  {
+    "text": "Transfer records to Apex Health Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Contact details for Care Group Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Beacon Medical Limited sent the results.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Is Unity Pharma Limited hiring nurses?",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Save address for Vital Diagnostics Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Review the report from Clinic Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Call the lab at BioTech Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Found a bill from Therapy Limited.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Horizon Dental Limited updated their hours.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "Summit Vision Limited processed the claim.",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "The lab results from Blue Marble Limited are ready now.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Please update your health profile for Crest Medical Limited today.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "I received twenty digital prescriptions from North Star Limited yesterday.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The surgery schedule for Merit Hospital Limited is finally posted.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Does Pacific Pharma Limited have our current insurance info saved?",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Contact the nurse at Sterling Nursing Limited about your files.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The patient data from Midland Health Limited will sync by twenty.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Review the twenty exercise steps for Urban Fitness Limited tonight.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "Save the contact info for Delta Wellness Limited right now.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "I am looking at the x-rays from Zen Imaging Limited.",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "The blood test from Pacific Clinical Limited has been flagged for a manual review by the twenty resident lab technicians.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I have limited time to review the twenty patient files sent over by the staff at Crystal Health Limited.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please save the twenty new donor profiles for Iron Gate Medical Limited into the system before the next health audit.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The doctor from Silver Oak Limited asked for the twenty missing charts from the primary care ward last week.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I need to call the surgeon at Unity Surgery Limited regarding the twenty percent chance of a quick recovery.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The health coach at Alpha Wellness Limited suggested we save twenty minutes daily for meditation to reduce high stress levels.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Verify the insurance details for Emerald Pharma Limited before processing the twenty pending medical orders later this Friday afternoon.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The battery on my phone is low while checking the heart rate logs for Horizon Health Limited on the app.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "We need to clear the browser cache before logging into the portal for Secure Care Limited to see the twenty results.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The dental claim for the wisdom tooth was filed through Guardian Dental Limited and should be settled in twenty days.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I spent twenty hours this week organizing the medical history for Legacy Health Limited and syncing them to the cloud.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Check if the twenty digital prescriptions from Thorne Medical Limited have been saved to the encrypted drive for the doctor.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The budget for the twenty new beds at Delta Hospital Limited has been approved by the board of directors today.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Sync the twenty contact files from the partnership with Metro Clinic Limited so we can update the internal patient list.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The technical report from Quest Health Limited shows a twenty percent increase in app usage for the new fitness tracker.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "I am waiting for the twenty monthly health summaries from Prime Medical Limited to complete the annual wellness review.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The vaccine forecast provided by Orion Research Limited includes twenty key metrics that we need to monitor for the trial.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please backup the twenty spreadsheets from the server at Venture Biotech Limited before the scheduled system maintenance begins tonight.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "The representative from Merchant Pharmacy Limited called to discuss the twenty suspicious orders that were flagged on the corporate account.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Review the twenty safety clauses in the agreement with Corporate Health Limited to ensure we follow all current medical regulations.",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "Please save the twenty PDF results from North Star Health Limited into the clinic folder and sync them so the doctors can see.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The medical software update for Matrix Health Limited requires at least twenty gigabytes of free disk space to complete the installation for all users on the clinic network.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I have twenty reminders on my phone to check the status of the twenty different laboratory tests managed by the pathology team at Sterling Group Limited.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The data usage on my phone reached twenty percent of the limit while I was downloading the twenty page medical journal from International Health Limited today.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The system at Secure Medical Limited will be offline for twenty minutes tonight to update the security protocols for the twenty thousand patient files stored in our cloud.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "We need to clear the memory and delete twenty temporary files from the heart rate app belonging to Apex Health Limited to fix the sync errors.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I noticed twenty failed login attempts on the hospital account at Cyber Shield Limited so please update your twenty passwords and save the new ones now.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "The medical audit for Crescent Moon Health Limited is expected to take at least twenty days and will involve reviewing twenty different ledgers across our three offices.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "Please confirm the arrival times for the twenty specialists coming from Galaxy Health Limited so we can book the twenty parking spaces needed at the clinic.",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "I have limited time to organize the twenty patient project files for Global Health Limited before the board meeting begins at exactly twenty minutes past ten.",
+    "phrase": "limited",
+    "word_limit": 30
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "text": "storage space is currently limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "data access is limited today",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited connectivity in the basement",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited battery remains on device",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "background tasks are now limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "file sharing is limited here",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "your visibility is limited tonight",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited parking near the office",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "app permissions are quite limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited seating for the lecture",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "search results were very limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited time for lunch today",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "account privileges are currently limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited mobility after my workout",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited water supply in dorms",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited options for the flight",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "the screen time is limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited bandwidth slows the sync",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "entry is limited to residents",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited resources for the project",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "the guest list is limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited support for older versions",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited visibility on the mountain",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "my patience is getting limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited rainfall recorded this month",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited range on these headphones",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "speed is limited to twenty",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited room in my suitcase",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "access is limited during updates",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited growth for the plants",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited editing rights for this file",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited power available in economy",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "the scope is very limited",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited storage on the thumbdrive",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited knowledge of the subject",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited characters allowed in bio",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited daylight during winter months",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited signal strength inside elevators",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited capacity in the elevator",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "limited feedback from the user",
+    "phrase": "limited",
+    "word_limit": 6
+  },
+  {
+    "text": "system resources are limited during the heavy background backup",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the number of login attempts is limited for security",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "mobile data usage is limited to five gigabytes monthly",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "your access to this folder is limited by administrator",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "battery charging speed is limited to preserve cell health",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the professor said seating is limited for the review",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "network speed is limited until the next billing cycle",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "visibility was limited due to the heavy morning fog",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the amount of sugar is limited in this diet",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "parking is limited to two hours in this zone",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "app functionality is limited while the device is offline",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited storage space may prevent the system update from finishing",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "his participation in the meeting was limited to thirty minutes",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the guest list is limited to immediate family only",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "available memory is limited so close some inactive apps",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the warranty is limited to manufacturing defects only",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited connectivity may affect the synchronization of your files",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "this account has limited permissions for editing shared documents",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the study was limited to participants over twenty years old",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "water usage is limited during the summer drought period",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "upload speeds are limited on the public library network",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited space in the garage means we must declutter",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the effect of the medicine was limited to four hours",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "our budget for the trip is limited to fifty dollars",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the trial period is limited to seven days of use",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "file size is limited to ten megabytes for email attachments",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the number of attendees is limited by fire safety codes",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "my understanding of the hardware is limited to basic repairs",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the software is limited to running on sixty bit systems",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited visibility made the drive home quite dangerous tonight",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the group is limited to six people per session",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "her range of motion is limited after the surgery",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited options are available for the late night train",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the search was limited to the last twenty four hours",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "limited interaction with others can lead to feeling lonely",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the scope of the project is limited to local data",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "power is limited so please turn off the extra lights",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "the speaker has limited time for questions after the talk",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "only limited quantities of water are allowed on the plane",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "my ability to help is limited by the current rules",
+    "phrase": "limited",
+    "word_limit": 10
+  },
+  {
+    "text": "please note that storage is limited to fifteen gigabytes across all your synced applications and shared drive folders",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the battery life is limited to six hours when you are using the high performance graphics setting for gaming",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "access to the building is limited to employees with a valid security badge after eight o’clock in the evening",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the number of participants for the morning yoga class is limited to twenty to ensure everyone has enough space",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "your data plan is limited so try to connect to a local wifi network before downloading any large updates",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "due to the storm visibility on the highway is limited to less than fifty feet for the next hour",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the teacher said the essay length is limited to five hundred words to focus on the core arguments only",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "since my laptop has limited memory I can only run a few applications at the same time without lagging",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited parking is available at the stadium so we should consider taking the bus or a taxi instead tonight",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the system backup was limited to essential files because the external drive did not have enough remaining free space",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited information was shared during the brief news update regarding the road closure on the main downtown street today",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the application features are limited unless you enable location services in the privacy settings menu of your smartphone device",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "travel is limited to essential personnel only during the maintenance work on the train tracks through the weekend period",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the doctor advised that my physical activity should be limited to light walking for at least the next month",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "due to the holiday schedule the library hours are limited to between ten in the morning and two afternoon",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "because of the technical glitch the number of messages I can send is limited to five per hour currently",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited resources were allocated to the research project which made it difficult to collect data from a larger group",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the display brightness is limited when the phone enters low power mode to help the battery last much longer",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "seating in the theater is limited so please arrive at least thirty minutes before the show begins to find seats",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "my range of motion was limited after the gym session because I forgot to stretch properly after lifting weights",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the amount of salt in the recipe should be limited to one teaspoon to keep the dish healthy today",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited access to the internet in rural areas makes it hard for students to complete their online homework assignments",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the software license is limited to one device per user so you cannot install it on your secondary tablet",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "this specific model has limited compatibility with older hardware components so check the manual before you try to install",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited daylight during the winter makes it very difficult for me to stay productive after four in the afternoon",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the results of the blood test were limited so the nurse asked me to come back for more testing",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "entry to the museum gallery is limited to fifty people at a time to prevent overcrowding around the exhibits",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the power output from this charger is limited to ten watts which is why your phone is charging slowly",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited speech was allowed during the silent retreat so we used hand gestures to communicate with each other instead",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the scope of our discussion today will be limited to the three main points mentioned in the meeting agenda",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the amount of liquid you can carry is limited to one hundred milliliters per container for the international flight",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited visibility was reported by the pilots as they approached the runway due to the heavy smoke from nearby",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the cache size is limited to two hundred megabytes to ensure the browser performance remains fast on older laptops",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "because the kitchen is small our cooking options are limited to simple meals that only require one or two",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited storage on the cloud drive means I have to delete some old photos before I can upload new",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "her role in the play was limited to a few lines in the first act but she practiced daily",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the number of books you can check out from the library is limited to ten per month per card",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited growth of the city is expected over the next decade because of the new environmental protection laws passed",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "the available bandwidth for streaming is limited when everyone in the house is using the internet at the same",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "limited help was available for the move so we had to carry most of the heavy furniture by ourselves",
+    "phrase": "limited",
+    "word_limit": 20
+  },
+  {
+    "text": "because the hardware is quite old the operating system has limited support for the latest security features and app updates available on the market",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the number of files you can select for the batch upload is limited to twenty to prevent the server from timing out during the transfer process",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "due to the recent budget cuts the staff hours at the community center will be limited to weekday mornings starting from the first of next month",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited connectivity in the subway tunnels means that your messages might be delayed until you reach the next station with a stronger cellular signal",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the physician noted that my caloric intake should be limited to two thousand calories per day while I am recovering from the recent medical procedure",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "seating for the graduation ceremony is limited to four guests per student so please make sure to confirm your attendance list as soon as possible",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the amount of time children spend on tablets should be limited to one hour a day to encourage more physical activity and outdoor play during summer",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "since the water heater is small the duration of hot showers is limited to ten minutes if more than one person needs to use the bathroom",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the storage capacity on this legacy device is limited so you will need to move your media files to an external drive to free up space",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited visibility during the heavy snowfall meant that all flights were grounded at the airport until the runways could be cleared by the maintenance crews",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the experiment was limited to a very small sample size which makes it difficult to draw broad conclusions about the behavior of the general population today",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "access to the admin panel is limited to senior developers to ensure that no critical system settings are changed without a proper peer review process first",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the software trial is limited to fifteen days of full access after which you will only be able to view files without making any further edits",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "due to environmental regulations the construction noise is limited to the hours between nine in the morning and five in the evening on weekdays only",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the amount of memory allocated to the virtual machine is limited to four gigabytes to prevent the host computer from slowing down during your daily tasks",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited resources at the local clinic meant that patients had to wait several hours before seeing a doctor for their routine checkups and medical consultations",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the number of characters for your text signature is limited to thirty including spaces so please keep your message brief and to the point for readers",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "parking in the downtown area is limited during the festival so the city council recommends using public transportation to avoid long delays and high traffic volume",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the processor speed is limited when the laptop is not plugged into a power source to help conserve the remaining battery life for your work project",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the warranty provided by the manufacturer is limited to defects in materials and workmanship and does not cover accidental damage caused by the user or liquid",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited interaction with the touch screen may occur if your hands are wet or if you are wearing gloves that are not compatible with mobile devices",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the guest wifi network has limited bandwidth compared to the primary connection to ensure that critical business operations always have the highest priority for data",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "your ability to upload high definition video is limited while you are on a roaming cellular network to prevent excessive data charges on your monthly bill",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the amount of fertilizer you should use for these specific plants is limited to one small scoop every two weeks during the active growing season period",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited space in the dormitory room means that students should only bring the most essential items and avoid large furniture or excessive amounts of clothing items",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the number of invites for the private beta test is limited to one hundred users to gather focused feedback before the official launch of the application",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "because the meeting room has limited capacity we can only allow two representatives from each department to attend the strategy session in person this morning",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the range of the remote control is limited to ten feet so make sure you are standing close to the receiver when trying to change settings",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited knowledge of the local language made it difficult for the tourists to find the correct bus stop without the help of a digital translation app",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the amount of overtime we can work this week is limited to five hours per person according to the latest memo from the human resources department",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited daylight during the winter months often leads to a decrease in outdoor exercise for many people living in the northern parts of the country tonight",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the system log shows that memory was limited at the time of the crash which suggests that too many background processes were running on your computer",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the group project was limited to three weeks of research time so we had to work efficiently to finish all the data collection and analysis phases",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited access to clean water in the remote village required the inhabitants to walk several miles every morning to reach the nearest well for their needs",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the teacher explained that the scope of the final exam would be limited to the chapters covered in the second half of the semester after midterm",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited options for healthy food at the airport meant that I had to settle for a simple salad and a bottle of water before my flight",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the number of active connections to the database is limited to fifty to ensure that the response time remains fast for all users on the platform",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited visibility was reported on the bridge due to the high winds and sea spray making it very difficult for small vehicles to cross safely",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "the size of the email attachment you are trying to send is limited to twenty megabytes so please use a cloud link instead for larger files",
+    "phrase": "limited",
+    "word_limit": 30
+  },
+  {
+    "text": "limited seating is available on the shuttle bus so it operates on a first come first served basis for all passengers traveling to the remote terminal",
+    "phrase": "limited",
+    "word_limit": 30
+  }
+]
