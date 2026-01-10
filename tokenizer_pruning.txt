@@ -1,0 +1,260 @@
+Below is a **clean, efficient, and production-grade approach** to:
+
+1. Load an **ALBERT SentencePiece `.model` (protobuf)**
+2. **Retain only token IDs listed in `vocab.csv`**
+3. **Delete remaining tokens from the tokenizer**
+4. **Remap embedding indices**
+5. **Resize ALBERT embeddings accordingly**
+6. Keep everything **modular and auditable**
+
+This is the **correct way** to do vocab pruning for ALBERT/XLM-R style models.
+
+---
+
+## Assumptions
+
+* `vocab.csv` contains **one column**: `token_id`
+* Token IDs correspond to **SentencePiece IDs**
+* You are using **ALBERT from HuggingFace**
+* Tokenizer is **SentencePiece-based**
+* You want a **fully consistent tokenizer + model**
+
+---
+
+## High-Level Flow (Important)
+
+```
+vocab.csv (kept token_ids)
+        ↓
+Load SentencePiece protobuf
+        ↓
+Prune pieces + rebuild ID map
+        ↓
+Save new .model
+        ↓
+Load ALBERT tokenizer from new .model
+        ↓
+Remap embedding matrix
+        ↓
+Resize model embeddings
+```
+
+---
+
+## 1. Dependencies
+
+```bash
+pip install sentencepiece protobuf transformers torch pandas
+```
+
+---
+
+## 2. Load Token IDs to Retain
+
+```python
+import pandas as pd
+
+def load_kept_token_ids(vocab_csv_path: str) -> set[int]:
+    df = pd.read_csv(vocab_csv_path)
+    assert "token_id" in df.columns, "vocab.csv must contain token_id column"
+    return set(df["token_id"].astype(int).tolist())
+```
+
+---
+
+## 3. Load SentencePiece Protobuf Model
+
+```python
+from sentencepiece import sentencepiece_model_pb2 as sp_pb2
+
+def load_sp_model(model_path: str) -> sp_pb2.ModelProto:
+    model = sp_pb2.ModelProto()
+    with open(model_path, "rb") as f:
+        model.ParseFromString(f.read())
+    return model
+```
+
+---
+
+## 4. Prune SentencePiece Vocabulary (Core Logic)
+
+This **physically removes tokens** and rebuilds IDs.
+
+```python
+def prune_sp_model(
+    sp_model: sp_pb2.ModelProto,
+    kept_token_ids: set[int]
+) -> tuple[sp_pb2.ModelProto, dict[int, int]]:
+    """
+    Returns:
+      - new pruned ModelProto
+      - old_id → new_id mapping
+    """
+    new_model = sp_pb2.ModelProto()
+    new_model.CopyFrom(sp_model)
+
+    new_model.pieces.clear()
+
+    old_to_new_id = {}
+    new_id = 0
+
+    for old_id, piece in enumerate(sp_model.pieces):
+        if old_id in kept_token_ids:
+            new_piece = new_model.pieces.add()
+            new_piece.CopyFrom(piece)
+            old_to_new_id[old_id] = new_id
+            new_id += 1
+
+    return new_model, old_to_new_id
+```
+
+---
+
+## 5. Save the New SentencePiece Model
+
+```python
+def save_sp_model(sp_model: sp_pb2.ModelProto, output_path: str):
+    with open(output_path, "wb") as f:
+        f.write(sp_model.SerializeToString())
+```
+
+---
+
+## 6. Load ALBERT Tokenizer from Pruned Model
+
+```python
+from transformers import AlbertTokenizer
+
+def load_pruned_tokenizer(sp_model_path: str) -> AlbertTokenizer:
+    return AlbertTokenizer(
+        vocab_file=sp_model_path,
+        keep_accents=True
+    )
+```
+
+---
+
+## 7. Resize ALBERT Embeddings (Correct Way)
+
+### Why this matters
+
+* ALBERT uses **factorized embeddings**
+* You must update **word_embeddings**, not hidden layers
+
+---
+
+### Embedding Remapping Logic
+
+```python
+import torch
+from transformers import AlbertModel
+
+def resize_albert_embeddings(
+    model: AlbertModel,
+    old_to_new_id: dict[int, int],
+    new_vocab_size: int
+):
+    with torch.no_grad():
+        old_embeddings = model.embeddings.word_embeddings.weight.data
+        embedding_dim = old_embeddings.shape[1]
+
+        new_embeddings = torch.zeros(
+            (new_vocab_size, embedding_dim),
+            device=old_embeddings.device,
+            dtype=old_embeddings.dtype
+        )
+
+        for old_id, new_id in old_to_new_id.items():
+            new_embeddings[new_id] = old_embeddings[old_id]
+
+        model.embeddings.word_embeddings = torch.nn.Embedding.from_pretrained(
+            new_embeddings,
+            freeze=False
+        )
+
+        model.config.vocab_size = new_vocab_size
+```
+
+---
+
+## 8. End-to-End Driver Script
+
+```python
+def prune_albert_vocab(
+    vocab_csv: str,
+    original_sp_model: str,
+    output_sp_model: str,
+    albert_model_name: str,
+    output_model_dir: str
+):
+    kept_ids = load_kept_token_ids(vocab_csv)
+
+    sp_model = load_sp_model(original_sp_model)
+    pruned_sp_model, id_map = prune_sp_model(sp_model, kept_ids)
+    save_sp_model(pruned_sp_model, output_sp_model)
+
+    tokenizer = load_pruned_tokenizer(output_sp_model)
+
+    model = AlbertModel.from_pretrained(albert_model_name)
+    resize_albert_embeddings(
+        model,
+        id_map,
+        new_vocab_size=len(id_map)
+    )
+
+    tokenizer.save_pretrained(output_model_dir)
+    model.save_pretrained(output_model_dir)
+```
+
+---
+
+## 9. Validation Checks (DO NOT SKIP)
+
+```python
+def sanity_checks(tokenizer, model):
+    assert tokenizer.vocab_size == model.config.vocab_size
+    assert model.embeddings.word_embeddings.weight.shape[0] == tokenizer.vocab_size
+```
+
+---
+
+## Key Technical Notes (Important)
+
+### Why this approach is correct
+
+* SentencePiece IDs **must be contiguous**
+* HuggingFace tokenizers **trust tokenizer.vocab_size**
+* ALBERT embeddings are **factorized**, but vocab dimension is still explicit
+* You **cannot** just delete rows without remapping IDs
+
+---
+
+### Common Mistakes to Avoid
+
+| Mistake                                 | Why it breaks                 |
+| --------------------------------------- | ----------------------------- |
+| Deleting tokenizer tokens only          | Embeddings mismatch           |
+| Resizing model only                     | Tokenizer still emits old IDs |
+| Keeping gaps in IDs                     | SentencePiece crashes         |
+| Using `resize_token_embeddings` blindly | Wrong ordering                |
+
+---
+
+## When This Is Especially Useful
+
+* Mobile / TFLite deployment
+* Notification classifiers
+* Multilingual pruning
+* Latency + memory constrained systems
+* Android JNI SentencePiece integration (your use case)
+
+---
+
+If you want, next I can:
+
+* Add **[UNK]/[CLS]/[SEP] safety enforcement**
+* Show **ONNX / TFLite-safe pruning**
+* Convert this into a **CLI tool**
+* Optimize for **Android SentencePiece JNI**
+
+Just say which direction.
