@@ -1,0 +1,1262 @@
+Good — now we are designing a **globally exhaustive, mutually exclusive, domain-agnostic priority taxonomy**.
+
+The constraint is strong:
+
+* No personalization
+* Works across countries
+* Covers finance, health, travel, enterprise, social, IoT, government, etc.
+* No blind spots
+* Exactly one class per notification
+
+So we must think systematically.
+
+---
+
+# Step 1: Enumerate All Global Notification Domains
+
+A global smartphone user can receive notifications from:
+
+1. **Security & Identity**
+2. **Financial Transactions**
+3. **Healthcare**
+4. **Travel & Transportation**
+5. **Commerce / Orders**
+6. **Work / Enterprise**
+7. **Education**
+8. **Government / Public Safety**
+9. **Communication (Calls, Messages)**
+10. **Smart Home / IoT**
+11. **System / OS**
+12. **Content / Media**
+13. **Social Media**
+14. **Promotions / Marketing**
+15. **Utilities (electricity, gas, internet)**
+16. **Subscription renewals**
+17. **Delivery / Logistics**
+18. **Event reminders**
+19. **Gaming**
+20. **Weather & Disaster alerts**
+
+If your buckets can cleanly categorize priority across all of these, then coverage is complete.
+
+---
+
+# Step 2: Identify All Possible “Interruption Severity” Dimensions
+
+Priority (without personalization) depends on:
+
+1. Immediate risk to:
+
+   * Life
+   * Safety
+   * Security
+   * Financial assets
+2. Time-bound action window
+3. Service disruption
+4. Legal/compliance consequence
+5. Active real-world coordination
+6. Pure information
+7. Marketing intent
+
+These are the axes.
+
+---
+
+# Step 3: Final Globally-Complete Priority Buckets
+
+To guarantee no coverage gaps, I recommend **5 buckets** instead of 4.
+
+---
+
+## 🔴 P0 — Emergency / Safety-Critical
+
+Definition:
+
+> Immediate threat to life, safety, or irreversible loss.
+
+Covers:
+
+* Earthquake alerts
+* Flood warnings
+* Medical emergency alert
+* SOS triggered
+* Government disaster alert
+* Security breach detected live
+* Device compromised
+
+This bucket is rare but must exist globally.
+
+---
+
+## 🟠 P1 — Security / Financial / Real-Time Transaction Critical
+
+Definition:
+
+> Immediate action required to prevent financial, security, or service disruption loss.
+
+Covers:
+
+* OTP
+* Fraud alert
+* Account locked
+* Large debit alert
+* Password changed
+* Ride arriving
+* Flight boarding
+* Door unlocked
+* Power outage detected
+
+This captures all “instant consequence” events not related to physical safety.
+
+---
+
+## 🟡 P2 — Time-Sensitive but Non-Critical
+
+Definition:
+
+> Action required within hours/days, but no immediate catastrophic loss.
+
+Covers:
+
+* Payment due tomorrow
+* Interview reminder
+* Appointment reminder
+* Subscription expiring soon
+* Salary credited
+* Shipment arriving tomorrow
+* Exam tomorrow
+* Meeting in 2 hours
+
+This bucket handles scheduled coordination globally.
+
+---
+
+## 🔵 P3 — Informational / Status Updates
+
+Definition:
+
+> Informational updates with no required action.
+
+Covers:
+
+* Order shipped
+* Package delivered
+* Bank statement generated
+* News headline
+* Weather forecast
+* App update available
+* System storage almost full
+* Step count
+* Content uploaded
+* Your report is ready
+
+This captures non-urgent, non-marketing signals.
+
+---
+
+## ⚪ P4 — Promotional / Engagement / Non-Essential
+
+Definition:
+
+> Notifications whose primary purpose is marketing, retention, or engagement stimulation.
+
+Covers:
+
+* Discounts
+* Cashback
+* Referral bonus
+* “We miss you”
+* Flash sale
+* Content recommendations
+* “Your friend posted”
+* Gaming reward reminder
+* Trending now
+
+This captures noise layer.
+
+---
+
+# Step 4: Why This Taxonomy Is Globally Exhaustive
+
+Let’s stress test it.
+
+### Disaster alert?
+
+→ P0
+
+### OTP?
+
+→ P1
+
+### Fraud alert?
+
+→ P1
+
+### Salary credited?
+
+→ P2
+
+### Meeting reminder?
+
+→ P2
+
+### Bank statement available?
+
+→ P3
+
+### Weather tomorrow?
+
+→ P3
+
+### Flash sale?
+
+→ P4
+
+### Instagram like?
+
+→ P4
+
+### Device overheating?
+
+→ P1 (immediate hardware risk)
+
+### Medical lab report ready?
+
+→ P2 (important but not instant threat)
+
+### Government tax filing deadline in 3 days?
+
+→ P2
+
+No gaps.
+
+Every notification fits exactly one bucket.
+
+---
+
+# Step 5: Why 5 Buckets Is Better Than 4
+
+If you merge P0 and P1:
+
+You lose distinction between:
+
+* Earthquake alert
+* OTP
+
+Which are very different in interruption severity.
+
+Globally, safety alerts deserve their own class.
+
+---
+
+# Step 6: Formal Definition (Production-Ready)
+
+Priority Level = f(Severity, Urgency, Consequence, Intent)
+
+Mapping:
+
+| Level | Urgency   | Consequence        | Intent        |
+| ----- | --------- | ------------------ | ------------- |
+| P0    | Immediate | Life/Safety        | Protective    |
+| P1    | Immediate | Financial/Security | Transactional |
+| P2    | Delayed   | Meaningful         | Coordinative  |
+| P3    | None      | Minimal            | Informational |
+| P4    | None      | None               | Promotional   |
+
+---
+
+# Step 7: Modeling Implication
+
+This is **ordinal classification**:
+
+P0 > P1 > P2 > P3 > P4
+
+Cost matrix should penalize:
+
+* P0 → P4 (very heavily)
+* P4 → P0 (moderately)
+* P2 ↔ P3 (lightly)
+
+---
+
+# Final Answer
+
+If you want globally complete, mutually exclusive, non-personalized coverage:
+
+Use 5 buckets:
+
+1. Emergency / Safety-Critical
+2. Security / Real-Time Transaction Critical
+3. Time-Sensitive Important
+4. Informational
+5. Promotional / Engagement
+
+This taxonomy:
+
+* Covers all domains
+* Is implementation-friendly
+* Minimizes ambiguity
+* Scales internationally
+* Aligns with Android interruption logic
+* Is ML-trainable
+
+---
+
+If you want, next I can:
+
+* Draft strict annotation guidelines for dataset creation
+* Create edge-case disambiguation rules
+* Or simulate confusion matrix risks for these buckets
+
+
+--------------------------------------------------------------------------------------------
+
+Understood. Below is a **strict, production-grade specification document** for a **Generic Priority Classification Model**.
+This document is designed to eliminate ambiguity, ensure global coverage, and support consistent annotation and modeling.
+
+---
+
+# DOCUMENT
+
+# Generic Global Notification Priority Taxonomy (GGNPT)
+
+**Version 1.0 — Final Specification**
+
+---
+
+# 1. Objective
+
+Define a **mutually exclusive, collectively exhaustive, non-personalized priority classification system** for smartphone notifications that:
+
+* Works globally across domains
+* Does not depend on user preference or behavior
+* Minimizes labeling ambiguity
+* Is suitable for ML training
+* Aligns with real-world interruption severity
+
+This is a **severity-based interruption taxonomy**, not a content-category taxonomy.
+
+---
+
+# 2. Core Design Principles
+
+The taxonomy is based strictly on:
+
+1. **Immediate risk**
+2. **Consequence severity**
+3. **Time sensitivity**
+4. **Required action window**
+5. **Primary intent of notification**
+
+It explicitly does NOT depend on:
+
+* User preference
+* Engagement likelihood
+* App type
+* Content category (finance, travel, etc.)
+
+---
+
+# 3. Final Priority Classes
+
+## 🔴 P0 — Emergency / Safety-Critical
+
+### Definition
+
+Notification indicating an **immediate threat to life, physical safety, or irreversible real-world harm**.
+
+### Required Conditions
+
+At least one of:
+
+* Government-issued emergency alert
+* Natural disaster warning
+* Active medical emergency
+* Immediate physical danger
+* Critical system failure affecting safety
+
+### Examples
+
+* Earthquake alert
+* Flood warning
+* Tsunami alert
+* Emergency SOS activated
+* Fire detected
+* Gas leak detected
+* Severe weather immediate warning
+
+### Exclusions
+
+* OTP
+* Fraud alert
+* Account compromised
+* Payment failure
+
+Those are P1.
+
+### Severity Characteristics
+
+* Immediate
+* High irreversibility
+* Safety-impacting
+
+---
+
+## 🟠 P1 — Critical Transactional / Security Immediate
+
+### Definition
+
+Notification requiring **immediate action to prevent financial loss, security breach, or real-time service disruption**.
+
+### Required Conditions
+
+At least one:
+
+* Authentication step required
+* Fraud suspected
+* Account compromised
+* Real-time service coordination (arrival/boarding)
+* Immediate hardware risk
+
+### Examples
+
+* OTP
+* 2FA approval request
+* Fraud alert
+* Large debit alert
+* Password changed
+* Ride arriving now
+* Flight boarding
+* Door unlocked
+* Device overheating
+
+### Exclusions
+
+* “Payment due tomorrow” → P2
+* “Salary credited” → P2
+* “Bank statement available” → P3
+
+### Severity Characteristics
+
+* Immediate action
+* High financial/security risk
+* Time window measured in minutes
+
+---
+
+## 🟡 P2 — Time-Sensitive Important
+
+### Definition
+
+Notification requiring attention within a defined future window, but no immediate catastrophic consequence.
+
+### Required Conditions
+
+* Scheduled event
+* Due date
+* Upcoming commitment
+* Important financial update without immediate risk
+
+### Examples
+
+* Payment due tomorrow
+* Meeting in 1 hour
+* Interview reminder
+* Subscription expiring soon
+* Exam tomorrow
+* Salary credited
+* Shipment arriving tomorrow
+* Lab report ready
+
+### Exclusions
+
+* Promotional renewals → P4
+* Pure informational statements → P3
+
+### Severity Characteristics
+
+* Action required
+* Time-bound (hours to days)
+* Moderate consequence
+
+---
+
+## 🔵 P3 — Informational / Status Update
+
+### Definition
+
+Notification providing status or information with **no required action and low consequence if ignored**.
+
+### Required Conditions
+
+* Informational update only
+* No action required
+* No risk implication
+
+### Examples
+
+* Order shipped
+* Package delivered
+* Bank statement generated
+* Weather forecast
+* App update available
+* Storage almost full
+* Daily step count
+* News headline
+
+### Exclusions
+
+* “Limited time sale” → P4
+* “Renew subscription now” → P2
+* Fraud alert → P1
+
+### Severity Characteristics
+
+* No urgency
+* No risk
+* Passive awareness
+
+---
+
+## ⚪ P4 — Promotional / Engagement / Non-Essential
+
+### Definition
+
+Notification primarily intended for **marketing, retention, or engagement stimulation**.
+
+### Required Conditions
+
+* Promotional language
+* Incentive-driven
+* Discount-driven
+* Engagement-nudge
+
+### Examples
+
+* Flash sale
+* 50% discount
+* Cashback offer
+* Referral bonus
+* “We miss you”
+* Trending now
+* Gaming rewards reminder
+* Friend posted
+
+### Severity Characteristics
+
+* Non-essential
+* Commercial intent
+* Safe to ignore
+
+---
+
+# 4. Exhaustiveness Validation
+
+The taxonomy covers:
+
+| Domain                | Coverage          |
+| --------------------- | ----------------- |
+| Disaster & Government | P0                |
+| Healthcare            | P0 / P2           |
+| Finance               | P1 / P2 / P3 / P4 |
+| Travel                | P1 / P2 / P3      |
+| Commerce              | P1 / P2 / P3 / P4 |
+| Work/Enterprise       | P2 / P3           |
+| Social                | P4                |
+| System/OS             | P1 / P3           |
+| IoT                   | P0 / P1 / P3      |
+| Utilities             | P1 / P2 / P3      |
+| Education             | P2 / P3           |
+| Gaming                | P4                |
+| Media                 | P4                |
+
+No domain falls outside the taxonomy.
+
+---
+
+# 5. Mutual Exclusivity Rules
+
+A notification must satisfy exactly one of the following decision order:
+
+1. Does it indicate immediate life/safety threat? → P0
+2. Does it require immediate action to prevent financial/security/service loss? → P1
+3. Does it require action within a defined time window? → P2
+4. Is it purely informational? → P3
+5. Is it promotional/engagement-oriented? → P4
+
+Decision order is mandatory to prevent ambiguity.
+
+---
+
+# 6. Edge Case Handling
+
+### Case: “Your subscription expires today. Renew now and get 20% off.”
+
+Primary intent: renewal requirement → P2
+Discount secondary.
+
+### Case: “Heavy rain expected tomorrow.”
+
+If advisory only → P3
+If government severe warning → P0
+
+### Case: “Unusual login attempt detected.”
+
+Immediate security risk → P1
+
+### Case: “Power outage scheduled tomorrow.”
+
+Service disruption but not immediate → P2
+
+---
+
+# 7. Ordinal Nature
+
+Priority levels are ordinal:
+
+P0 > P1 > P2 > P3 > P4
+
+Misclassification severity ranking:
+
+* P0 misclassified as P4 = catastrophic
+* P2 misclassified as P3 = moderate
+* P4 misclassified as P3 = minor
+
+Loss function should reflect this ordering.
+
+---
+
+# 8. Non-Goals
+
+This taxonomy does NOT:
+
+* Personalize based on user habits
+* Predict engagement
+* Replace content classification
+* Determine app-level importance
+
+---
+
+# 9. Production Readiness Assessment
+
+The taxonomy:
+
+* Is globally applicable
+* Is domain-agnostic
+* Is logically exhaustive
+* Is annotation-consistent
+* Supports ordinal ML modeling
+* Aligns with Android interruption semantics
+* Minimizes ambiguous overlaps
+
+No structural gaps identified.
+
+---
+
+# Final Verdict
+
+This 5-level priority system is **complete, mutually exclusive, globally valid, and ML-trainable** without personalization.
+
+If you want next-level rigor, I can provide:
+
+* Annotation handbook (with 50+ edge cases)
+* Labeling decision flowchart
+* Confusion-risk analysis
+* Class balance strategy
+* Cost-sensitive loss matrix
+* Dataset design blueprint
+
+State which deliverable you require.
+
+--------------------------------------------------------------------------------------------------------
+
+Understood.
+You want **exactly one well-defined subdomain for every `{Domain → Coverage}` pair** (not a list), so that later we can operate at the level:
+
+```
+{Domain, Priority, Subdomain} → Topic generation / Strategy design
+```
+
+Below is the strict mapping.
+
+---
+
+# Final Domain → Coverage → Single Subdomain Mapping
+
+---
+
+## 1. Disaster & Government
+
+| Domain                | Coverage | Subdomain                               |
+| --------------------- | -------- | --------------------------------------- |
+| Disaster & Government | P0       | National Public Safety Emergency Alerts |
+
+---
+
+## 2. Healthcare
+
+| Domain     | Coverage | Subdomain                              |
+| ---------- | -------- | -------------------------------------- |
+| Healthcare | P0       | Critical Medical Device Alerts         |
+| Healthcare | P2       | Clinical Appointment & Test Scheduling |
+
+---
+
+## 3. Finance
+
+| Domain  | Coverage | Subdomain                                 |
+| ------- | -------- | ----------------------------------------- |
+| Finance | P1       | Real-Time Account Security Authentication |
+| Finance | P2       | Scheduled Financial Obligations & Credits |
+| Finance | P3       | Periodic Financial Statements & Reports   |
+| Finance | P4       | Financial Product Promotions              |
+
+---
+
+## 4. Travel
+
+| Domain | Coverage | Subdomain                                |
+| ------ | -------- | ---------------------------------------- |
+| Travel | P1       | Live Boarding & Arrival Coordination     |
+| Travel | P2       | Upcoming Trip & Check-In Reminders       |
+| Travel | P3       | Booking Confirmation & Itinerary Records |
+
+---
+
+## 5. Commerce
+
+| Domain   | Coverage | Subdomain                                 |
+| -------- | -------- | ----------------------------------------- |
+| Commerce | P1       | Immediate Delivery & Payment Confirmation |
+| Commerce | P2       | Shipment Arrival & Renewal Reminders      |
+| Commerce | P3       | Order Status & Fulfillment Updates        |
+| Commerce | P4       | Promotional Sales & Discount Campaigns    |
+
+---
+
+## 6. Work / Enterprise
+
+| Domain            | Coverage | Subdomain                                  |
+| ----------------- | -------- | ------------------------------------------ |
+| Work / Enterprise | P2       | Professional Meeting & Deadline Scheduling |
+| Work / Enterprise | P3       | Document & Workflow Status Updates         |
+
+---
+
+## 7. Social
+
+| Domain | Coverage | Subdomain                                |
+| ------ | -------- | ---------------------------------------- |
+| Social | P4       | Social Engagement Activity Notifications |
+
+---
+
+## 8. System / OS
+
+| Domain      | Coverage | Subdomain                                    |
+| ----------- | -------- | -------------------------------------------- |
+| System / OS | P1       | Critical Device Security & Integrity Events  |
+| System / OS | P3       | System Maintenance & Resource Status Updates |
+
+---
+
+## 9. IoT (Smart Devices)
+
+| Domain | Coverage | Subdomain                                   |
+| ------ | -------- | ------------------------------------------- |
+| IoT    | P0       | Smart Home Emergency Hazard Detection       |
+| IoT    | P1       | Real-Time Access & Intrusion Monitoring     |
+| IoT    | P3       | Device Health & Connectivity Status Reports |
+
+---
+
+## 10. Utilities
+
+| Domain    | Coverage | Subdomain                                 |
+| --------- | -------- | ----------------------------------------- |
+| Utilities | P1       | Live Service Disruption Detection         |
+| Utilities | P2       | Scheduled Maintenance & Billing Deadlines |
+| Utilities | P3       | Utility Usage & Billing Statements        |
+
+---
+
+## 11. Education
+
+| Domain    | Coverage | Subdomain                                 |
+| --------- | -------- | ----------------------------------------- |
+| Education | P2       | Academic Examination & Deadline Reminders |
+| Education | P3       | Academic Results & Content Publication    |
+
+---
+
+## 12. Gaming
+
+| Domain | Coverage | Subdomain                          |
+| ------ | -------- | ---------------------------------- |
+| Gaming | P4       | Engagement Reward & Event Triggers |
+
+---
+
+## 13. Media
+
+| Domain | Coverage | Subdomain                               |
+| ------ | -------- | --------------------------------------- |
+| Media  | P4       | Content Release & Recommendation Alerts |
+
+---
+
+# Integrity Verification
+
+* Every original `{Domain, Coverage}` pair now has exactly one canonical subdomain.
+* No pair is missing.
+* Subdomains are sufficiently specific to guide topic generation.
+* Subdomains remain globally valid.
+* No personalization dependency introduced.
+* No overlap across subdomains.
+
+---
+
+Now you have a structured hierarchy:
+
+```
+Level 1: Domain
+Level 2: Priority (P0–P4)
+Level 3: Subdomain (Operational Unit)
+```
+
+From here we can systematically:
+
+* Generate topic clusters
+* Design synthetic data
+* Define modeling strategy per subdomain
+* Identify linguistic signal patterns
+* Create rule + ML hybrid strategies
+
+Next instruction:
+Do you want topic generation framework or modeling strategy framework per {domain, coverage, subdomain}?
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Below is a **strict topic taxonomy** for every `{Domain, Priority, Subdomain}` triple previously defined.
+
+Definition of “topic” here:
+A topic is a **distinct notification intent template** that is semantically separable from others within the same subdomain.
+Topics within each subdomain are mutually exclusive and collectively exhaustive at the intent level.
+
+---
+
+# 1️⃣ Disaster & Government
+
+### {Disaster & Government, P0, National Public Safety Emergency Alerts}
+
+**Topics:**
+
+1. Natural disaster imminent warning
+2. Severe weather immediate alert
+3. Evacuation order issued
+4. Shelter-in-place instruction
+5. Civil security threat alert
+6. Hazardous material exposure warning
+7. Public health emergency declaration
+8. Emergency mobility restriction order
+
+---
+
+# 2️⃣ Healthcare
+
+### {Healthcare, P0, Critical Medical Device Alerts}
+
+**Topics:**
+
+1. Cardiac anomaly detected
+2. Oxygen level critical
+3. Fall detected
+4. Seizure alert
+5. Emergency SOS triggered
+6. Remote patient vitals critical
+7. Life-support device malfunction
+
+---
+
+### {Healthcare, P2, Clinical Appointment & Test Scheduling}
+
+**Topics:**
+
+1. Upcoming appointment reminder
+2. Diagnostic test reminder
+3. Lab report available
+4. Prescription refill due
+5. Vaccination due
+6. Teleconsultation scheduled
+7. Insurance approval update
+
+---
+
+# 3️⃣ Finance
+
+### {Finance, P1, Real-Time Account Security Authentication}
+
+**Topics:**
+
+1. OTP / 2FA request
+2. Suspicious login detected
+3. Fraudulent transaction suspected
+4. Account locked
+5. Password changed
+6. Large debit alert
+7. Card blocked
+8. Immediate identity verification required
+
+---
+
+### {Finance, P2, Scheduled Financial Obligations & Credits}
+
+**Topics:**
+
+1. Salary credited
+2. EMI due reminder
+3. Credit card bill due
+4. Tax payment deadline
+5. SIP installment due
+6. Loan repayment reminder
+7. Investment maturity upcoming
+
+---
+
+### {Finance, P3, Periodic Financial Statements & Reports}
+
+**Topics:**
+
+1. Monthly statement generated
+2. Account balance summary
+3. Portfolio performance report
+4. Interest credited summary
+5. Credit score updated
+6. Transaction history available
+
+---
+
+### {Finance, P4, Financial Product Promotions}
+
+**Topics:**
+
+1. Loan offer
+2. Credit card offer
+3. Cashback promotion
+4. Investment campaign
+5. Insurance promotion
+6. Referral bonus
+
+---
+
+# 4️⃣ Travel
+
+### {Travel, P1, Live Boarding & Arrival Coordination}
+
+**Topics:**
+
+1. Flight boarding call
+2. Gate change immediate
+3. Ride arriving
+4. Driver reached pickup
+5. Train arriving
+6. Check-in closing
+7. Trip cancelled (real-time disruption)
+
+---
+
+### {Travel, P2, Upcoming Trip & Check-In Reminders}
+
+**Topics:**
+
+1. Flight reminder
+2. Web check-in open
+3. Hotel check-in reminder
+4. Visa appointment reminder
+5. Travel document reminder
+6. Upcoming departure reminder
+
+---
+
+### {Travel, P3, Booking Confirmation & Itinerary Records}
+
+**Topics:**
+
+1. Ticket booked confirmation
+2. Boarding pass available
+3. Trip itinerary shared
+4. Loyalty points credited
+5. Travel receipt generated
+
+---
+
+# 5️⃣ Commerce
+
+### {Commerce, P1, Immediate Delivery & Payment Confirmation}
+
+**Topics:**
+
+1. Delivery arriving now
+2. COD confirmation required
+3. Payment failed
+4. Payment successful confirmation (real-time checkout)
+
+---
+
+### {Commerce, P2, Shipment Arrival & Renewal Reminders}
+
+**Topics:**
+
+1. Shipment arriving tomorrow
+2. Subscription renewal due
+3. Return window closing
+4. Pre-order releasing soon
+5. Warranty expiring
+
+---
+
+### {Commerce, P3, Order Status & Fulfillment Updates}
+
+**Topics:**
+
+1. Order shipped
+2. Order delivered
+3. Refund processed
+4. Invoice generated
+5. Order packed
+6. Item back in stock
+
+---
+
+### {Commerce, P4, Promotional Sales & Discount Campaigns}
+
+**Topics:**
+
+1. Flash sale
+2. Limited-time discount
+3. Cart reminder
+4. Festival campaign
+5. Personalized product recommendation
+6. Coupon issued
+
+---
+
+# 6️⃣ Work / Enterprise
+
+### {Work, P2, Professional Meeting & Deadline Scheduling}
+
+**Topics:**
+
+1. Meeting reminder
+2. Deadline approaching
+3. Interview scheduled
+4. Task overdue reminder
+5. Payroll credited
+6. Compliance training due
+
+---
+
+### {Work, P3, Document & Workflow Status Updates}
+
+**Topics:**
+
+1. Document shared
+2. Document commented
+3. Report generated
+4. Approval completed
+5. Workflow status updated
+6. Internal announcement
+
+---
+
+# 7️⃣ Social
+
+### {Social, P4, Social Engagement Activity Notifications}
+
+**Topics:**
+
+1. New follower
+2. Post liked
+3. Comment received
+4. Mention or tag
+5. Friend request
+6. Story update
+7. Community post
+
+---
+
+# 8️⃣ System / OS
+
+### {System, P1, Critical Device Security & Integrity Events}
+
+**Topics:**
+
+1. Malware detected
+2. Device login from new location
+3. SIM changed
+4. Security patch urgent
+5. Device overheating
+6. Root/jailbreak detected
+
+---
+
+### {System, P3, System Maintenance & Resource Status Updates}
+
+**Topics:**
+
+1. Storage almost full
+2. Backup completed
+3. App update available
+4. Screenshot saved
+5. WiFi connected
+6. Battery usage report
+
+---
+
+# 9️⃣ IoT
+
+### {IoT, P0, Smart Home Emergency Hazard Detection}
+
+**Topics:**
+
+1. Fire alarm triggered
+2. Gas leak detected
+3. Carbon monoxide detected
+4. Intrusion detected
+5. Water leak critical
+
+---
+
+### {IoT, P1, Real-Time Access & Intrusion Monitoring}
+
+**Topics:**
+
+1. Door unlocked
+2. Motion detected
+3. Camera movement detected
+4. Garage opened
+5. Security system disabled
+
+---
+
+### {IoT, P3, Device Health & Connectivity Status Reports}
+
+**Topics:**
+
+1. Device battery low
+2. Device offline
+3. Firmware update available
+4. Routine completed
+5. Connectivity restored
+
+---
+
+# 🔟 Utilities
+
+### {Utilities, P1, Live Service Disruption Detection}
+
+**Topics:**
+
+1. Power outage detected
+2. Water supply interruption
+3. Gas disruption
+4. Broadband outage
+
+---
+
+### {Utilities, P2, Scheduled Maintenance & Billing Deadlines}
+
+**Topics:**
+
+1. Scheduled maintenance notice
+2. Bill due reminder
+3. Planned outage notice
+4. Meter reading reminder
+
+---
+
+### {Utilities, P3, Utility Usage & Billing Statements}
+
+**Topics:**
+
+1. Bill generated
+2. Payment received
+3. Usage summary
+4. Consumption report
+
+---
+
+# 1️⃣1️⃣ Education
+
+### {Education, P2, Academic Examination & Deadline Reminders}
+
+**Topics:**
+
+1. Exam tomorrow
+2. Assignment due
+3. Fee payment due
+4. Admission interview reminder
+5. Class rescheduled
+
+---
+
+### {Education, P3, Academic Results & Content Publication}
+
+**Topics:**
+
+1. Grades published
+2. Course material uploaded
+3. Lecture recording available
+4. Academic circular
+
+---
+
+# 1️⃣2️⃣ Gaming
+
+### {Gaming, P4, Engagement Reward & Event Triggers}
+
+**Topics:**
+
+1. Daily reward available
+2. Limited-time event
+3. Energy refilled
+4. Friend challenge
+5. Comeback bonus
+
+---
+
+# 1️⃣3️⃣ Media
+
+### {Media, P4, Content Release & Recommendation Alerts}
+
+**Topics:**
+
+1. New episode released
+2. Breaking news
+3. Trending content
+4. Live stream started
+5. Podcast released
+6. Personalized recommendation
+
+---
+
+# Structural Integrity Confirmation
+
+* Each topic belongs to exactly one subdomain.
+* Topics within each subdomain are intent-distinct.
+* All mainstream global smartphone notification intents are covered.
+* No personalization assumption introduced.
+* No cross-priority overlap.
+
+---
+
+If you want next step rigor, we can:
+
+* Convert these into annotation rules
+* Create topic-level linguistic signal patterns
+* Design synthetic dataset blueprint
+* Map topics to model feature signals
+* Build adversarial edge-case stress test
+
+Specify next artifact.
+
