@@ -1,0 +1,78 @@
+import tensorflow as tf
+from keras_nlp.models import RetVec
+
+
+def build_model(
+    num_classes,
+    sequence_length=256,
+    embed_dim=256,
+    num_heads=4,
+    ff_dim=512,
+    num_attn_layers=1,
+    dropout=0.1,
+):
+    # ---- Input (IMPORTANT for TFLite) ----
+    inputs = tf.keras.Input(shape=(), dtype=tf.string)
+
+    # ---- RetVec ----
+    x = RetVec(
+        sequence_length=sequence_length,
+        use_tf_lite_compatible_ops=True
+    )(inputs)
+    # (B, seq_len, embed_dim)
+
+    # ---- Positional Embedding ----
+    positions = tf.range(start=0, limit=sequence_length, delta=1)
+    pos_embed = tf.keras.layers.Embedding(
+        input_dim=sequence_length,
+        output_dim=embed_dim
+    )(positions)
+
+    x = x + pos_embed
+
+    # ---- Transformer stack ----
+    for _ in range(num_attn_layers):
+        # Attention
+        attn_output = tf.keras.layers.MultiHeadAttention(
+            num_heads=num_heads,
+            key_dim=embed_dim // num_heads
+        )(x, x)
+
+        attn_output = tf.keras.layers.Dropout(dropout)(attn_output)
+        x = tf.keras.layers.LayerNormalization()(x + attn_output)
+
+        # FFN
+        ffn_output = tf.keras.layers.Dense(ff_dim, activation="relu")(x)
+        ffn_output = tf.keras.layers.Dense(embed_dim)(ffn_output)
+
+        ffn_output = tf.keras.layers.Dropout(dropout)(ffn_output)
+        x = tf.keras.layers.LayerNormalization()(x + ffn_output)
+
+    # ---- Pool + classify ----
+    x = tf.keras.layers.GlobalAveragePooling1D()(x)
+
+    logits = tf.keras.layers.Dense(num_classes)(x)
+
+    # 👉 Add softmax ONLY if you want probs in TFLite
+    outputs = tf.keras.layers.Softmax()(logits)
+
+    model = tf.keras.Model(inputs, outputs)
+
+    return model
+
+
+model = build_model(
+    num_classes=5,
+    num_attn_layers=2
+)
+
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(1e-4),
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False),
+    metrics=["accuracy"]
+)
+
+texts = ["Your OTP is 1234", "Flat 50% off today"]
+
+preds = model(tf.constant(texts))
+print(preds.shape)
