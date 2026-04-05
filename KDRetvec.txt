@@ -351,3 +351,319 @@ I can help you:
 * 🚀 Debug why your peer got 90%
 
 Just tell me 👍
+
+
+
+Good question — and this is where people usually get confused.
+
+👉 **Short answer:**
+
+* ❌ Distillation (BGE → your student) → **NO labels required**
+* ✅ Final classifier training → **YES labels required**
+
+So your pipeline is **2-stage**:
+
+```text
+Stage 1: Unsupervised Distillation (learn good embeddings)
+Stage 2: Supervised Fine-tuning (train classifier on labels)
+```
+
+---
+
+# 🧠 FULL PIPELINE (Production Style)
+
+---
+
+# 🔹 STAGE 0 — Data
+
+### You need 2 datasets:
+
+### 1. Unlabeled text (for distillation)
+
+```python
+unlabeled_texts = [
+    "Your order has been shipped",
+    "AAPL stock up 2%",
+    "Meeting at 5 PM",
+    ...
+]
+```
+
+👉 Can be **huge** (1M+ ideally)
+
+---
+
+### 2. Labeled dataset (for classification)
+
+```python
+texts = [...]
+labels = [0, 1, 2, ...]  # num_classes
+```
+
+---
+
+# 🔥 STAGE 1 — DISTILLATION (NO LABELS)
+
+---
+
+## ✅ Step 1: Build Student
+
+(Your modified model — returning embeddings + attention)
+
+```python
+student = build_student(
+    num_classes=None,
+    sequence_length=256,
+    embed_dim=256
+)
+```
+
+---
+
+## ✅ Step 2: Add Projection Layer
+
+```python
+projection = tf.keras.layers.Dense(1024)
+```
+
+---
+
+## ✅ Step 3: Teacher (BGE-M3)
+
+```python
+from transformers import AutoTokenizer, TFAutoModel
+
+teacher_name = "BAAI/bge-m3"
+tokenizer = AutoTokenizer.from_pretrained(teacher_name)
+teacher = TFAutoModel.from_pretrained(
+    teacher_name,
+    output_attentions=True
+)
+
+teacher.trainable = False
+```
+
+---
+
+## ✅ Step 4: Dataset Pipeline
+
+```python
+def distill_dataset(texts, batch_size=32):
+    ds = tf.data.Dataset.from_tensor_slices(texts)
+    ds = ds.shuffle(10000).batch(batch_size)
+    return ds
+```
+
+---
+
+## ✅ Step 5: Losses
+
+```python
+def embedding_loss(student_emb, teacher_emb):
+    student_emb = tf.math.l2_normalize(student_emb, axis=-1)
+    teacher_emb = tf.math.l2_normalize(teacher_emb, axis=-1)
+    return tf.reduce_mean(tf.square(student_emb - teacher_emb))
+
+
+def attention_loss(student_attn, teacher_attn):
+    loss = 0
+    for s, t in zip(student_attn, teacher_attn):
+        s = tf.nn.softmax(s, axis=-1)
+        t = tf.nn.softmax(t, axis=-1)
+        loss += tf.reduce_mean(tf.square(s - t))
+    return loss
+```
+
+---
+
+## ✅ Step 6: Training Loop
+
+⚠️ Important: tokenizer needs python → don’t wrap fully in `@tf.function`
+
+```python
+optimizer = tf.keras.optimizers.Adam(1e-4)
+
+def train_step(text_batch):
+
+    # ---- Teacher ----
+    teacher_inputs = tokenizer(
+        list(text_batch.numpy()),
+        padding=True,
+        truncation=True,
+        return_tensors="tf"
+    )
+
+    teacher_outputs = teacher(**teacher_inputs)
+
+    teacher_cls = teacher_outputs.last_hidden_state[:, 0, :]
+    teacher_attn = teacher_outputs.attentions
+
+    # ---- Student ----
+    with tf.GradientTape() as tape:
+        student_emb, student_attn = student(text_batch, training=True)
+
+        student_emb = projection(student_emb)
+
+        loss_emb = embedding_loss(student_emb, teacher_cls)
+        loss_attn = attention_loss(student_attn, teacher_attn)
+
+        loss = loss_emb + 0.5 * loss_attn
+
+    grads = tape.gradient(loss, student.trainable_variables + projection.trainable_variables)
+    optimizer.apply_gradients(zip(grads, student.trainable_variables + projection.trainable_variables))
+
+    return loss
+```
+
+---
+
+## ✅ Step 7: Run Training
+
+```python
+ds = distill_dataset(unlabeled_texts)
+
+for epoch in range(3):
+    for batch in ds:
+        loss = train_step(batch)
+    print(f"Epoch {epoch}, Loss: {loss.numpy()}")
+```
+
+---
+
+## ✅ Step 8: Save Encoder (IMPORTANT)
+
+👉 Save ONLY student (not teacher)
+
+```python
+student.save("student_encoder.keras")
+projection_model = tf.keras.Sequential([projection])
+projection_model.save("projection.keras")
+```
+
+---
+
+# 🧠 STAGE 2 — CLASSIFIER TRAINING (USES LABELS)
+
+Now your encoder is **smart**.
+
+---
+
+## ✅ Step 1: Reload Encoder
+
+```python
+student = tf.keras.models.load_model("student_encoder.keras")
+```
+
+---
+
+## ✅ Step 2: Build Classifier Model
+
+```python
+def build_classifier(student, num_classes):
+
+    inputs = tf.keras.Input(shape=(), dtype=tf.string)
+
+    embeddings, _ = student(inputs)
+
+    x = tf.keras.layers.Dense(256, activation="relu")(embeddings)
+    x = tf.keras.layers.Dropout(0.2)(x)
+
+    logits = tf.keras.layers.Dense(num_classes)(x)
+
+    outputs = tf.keras.layers.Softmax()(logits)
+
+    return tf.keras.Model(inputs, outputs)
+```
+
+---
+
+## ✅ Step 3: Dataset
+
+```python
+def cls_dataset(texts, labels, batch_size=32):
+    ds = tf.data.Dataset.from_tensor_slices((texts, labels))
+    ds = ds.shuffle(10000).batch(batch_size)
+    return ds
+```
+
+---
+
+## ✅ Step 4: Train Classifier
+
+```python
+classifier = build_classifier(student, num_classes=5)
+
+classifier.compile(
+    optimizer=tf.keras.optimizers.Adam(1e-4),
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+    metrics=["accuracy"]
+)
+
+train_ds = cls_dataset(texts, labels)
+
+classifier.fit(train_ds, epochs=5)
+```
+
+---
+
+## ✅ Step 5: Save Final Model
+
+```python
+classifier.save("final_model.keras")
+```
+
+---
+
+## ✅ Step 6: Reload + Inference
+
+```python
+model = tf.keras.models.load_model("final_model.keras")
+
+pred = model(tf.constant(["Your order has shipped"]))
+print(pred)
+```
+
+---
+
+# 🧠 Final Understanding (VERY IMPORTANT)
+
+---
+
+## 🔥 Why this works
+
+### Without distillation:
+
+```text
+RetVec → weak embeddings → classifier struggles
+```
+
+---
+
+### With distillation:
+
+```text
+BGE knowledge → student → strong embeddings → easy classification
+```
+
+---
+
+# ⚠️ Common Mistakes (YOU were close to these)
+
+* ❌ Training classifier from scratch → bad accuracy
+* ❌ Expecting logits from BGE → impossible
+* ❌ No projection layer → mismatch crash
+* ❌ Small dataset → unstable outputs (0.49/0.51)
+
+---
+
+# 🚀 If you want next upgrade
+
+I can take this further:
+
+* Add **contrastive loss (huge boost)**
+* Replace pooling with **CLS token (better than avg)**
+* Make it **TFLite-ready (no unsupported ops)**
+* Optimize for **Android inference (your use case)**
+
+Just tell me 👍
+
