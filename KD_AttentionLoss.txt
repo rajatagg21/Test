@@ -1,0 +1,186 @@
+import tensorflow as tf
+from tensorflow.keras import layers
+from transformers import AutoTokenizer, TFAutoModel
+from retvec.tf import RETVecTokenizer
+
+# -------------------------------
+# 1. TEACHER SETUP (MiniLM)
+# -------------------------------
+teacher_name = "sentence-transformers/all-MiniLM-L6-v2"
+
+hf_tokenizer = AutoTokenizer.from_pretrained(teacher_name)
+teacher_model = TFAutoModel.from_pretrained(
+    teacher_name,
+    output_attentions=True
+)
+teacher_model.trainable = False
+
+
+# -------------------------------
+# 2. STUDENT MODEL (RetVec-based)
+# -------------------------------
+class StudentModel(tf.keras.Model):
+    def __init__(self, seq_len=128):
+        super().__init__()
+        
+        self.retvec = RETVecTokenizer(sequence_length=seq_len)
+        
+        self.proj = layers.Dense(256)
+        
+        self.bigru = layers.Bidirectional(
+            layers.GRU(128, return_sequences=True)
+        )
+        
+        self.mha = layers.MultiHeadAttention(
+            num_heads=4,
+            key_dim=64
+        )
+        
+        self.norm = layers.LayerNormalization()
+
+    def call(self, text, training=False, return_attn=False):
+        x = self.retvec(text)              # (B, T, D)
+        x = self.proj(x)                   # (B, T, 256)
+        x = self.bigru(x)                  # (B, T, 256)
+        
+        attn_out, attn_scores = self.mha(
+            x, x,
+            return_attention_scores=True,
+            training=training
+        )
+        
+        x = self.norm(x + attn_out)
+        
+        if return_attn:
+            return x, attn_scores  # (B, 4, T, T)
+        return x
+
+
+# -------------------------------
+# 3. DISTILLER (ATTENTION ONLY)
+# -------------------------------
+class AttentionDistiller(tf.keras.Model):
+    def __init__(self, student, teacher, tokenizer):
+        super().__init__()
+        
+        self.student = student
+        self.teacher = teacher
+        self.tokenizer = tokenizer
+        
+        self.loss_tracker = tf.keras.metrics.Mean(name="attn_loss")
+
+    @property
+    def metrics(self):
+        return [self.loss_tracker]
+
+    def map_teacher_heads(self, teacher_attn):
+        # (B, 12, T, T) → (B, 4, T, T)
+        B = tf.shape(teacher_attn)[0]
+        T = tf.shape(teacher_attn)[-1]
+        
+        teacher_attn = tf.reshape(teacher_attn, (B, 4, 3, T, T))
+        return tf.reduce_mean(teacher_attn, axis=2)
+
+    def tokenize_teacher(self, texts):
+        # texts: tf.Tensor of shape (B, 1)
+        texts = tf.squeeze(texts, axis=1)  # (B,)
+        
+        encoded = self.tokenizer(
+            texts.numpy().tolist(),
+            padding="max_length",
+            truncation=True,
+            max_length=128,
+            return_tensors="tf"
+        )
+        
+        return encoded["input_ids"], encoded["attention_mask"]
+
+    @tf.function
+    def train_step(self, data):
+        texts = data  # only raw text
+        
+        # -------- Teacher Tokenization (outside graph) --------
+        input_ids, attention_mask = tf.py_function(
+            func=self.tokenize_teacher,
+            inp=[texts],
+            Tout=[tf.int32, tf.int32]
+        )
+        
+        input_ids.set_shape([None, 128])
+        attention_mask.set_shape([None, 128])
+        
+        # -------- Teacher --------
+        t_outputs = self.teacher(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            output_attentions=True,
+            training=False
+        )
+        
+        t_attn = t_outputs.attentions[-1]  # (B, 12, T, T)
+        t_attn = self.map_teacher_heads(t_attn)  # (B, 4, T, T)
+        
+        # -------- Student --------
+        with tf.GradientTape() as tape:
+            _, s_attn = self.student(
+                texts,
+                training=True,
+                return_attn=True
+            )
+            
+            # -------- Align lengths (important) --------
+            min_len = tf.minimum(
+                tf.shape(s_attn)[-1],
+                tf.shape(t_attn)[-1]
+            )
+            
+            s_attn = s_attn[:, :, :min_len, :min_len]
+            t_attn = t_attn[:, :, :min_len, :min_len]
+            
+            # -------- Normalize --------
+            t_attn = tf.nn.softmax(t_attn, axis=-1)
+            s_attn = tf.nn.softmax(s_attn, axis=-1)
+            
+            # -------- Loss --------
+            loss = tf.reduce_mean(tf.square(t_attn - s_attn))
+        
+        grads = tape.gradient(loss, self.student.trainable_variables)
+        self.optimizer.apply_gradients(zip(grads, self.student.trainable_variables))
+        
+        self.loss_tracker.update_state(loss)
+        return {"attn_loss": self.loss_tracker.result()}
+
+
+# -------------------------------
+# 4. INITIALIZE
+# -------------------------------
+student = StudentModel(seq_len=128)
+
+distiller = AttentionDistiller(
+    student=student,
+    teacher=teacher_model,
+    tokenizer=hf_tokenizer
+)
+
+distiller.compile(
+    optimizer=tf.keras.optimizers.Adam(1e-4)
+)
+
+
+# -------------------------------
+# 5. DUMMY DATA (RUN TEST)
+# -------------------------------
+texts = tf.constant([
+    ["Your order has been shipped"],
+    ["Get 50 percent discount now"],
+    ["Meeting scheduled at 10 AM"],
+    ["Your OTP is 123456"]
+])
+
+dataset = tf.data.Dataset.from_tensor_slices(texts).batch(2)
+
+
+# -------------------------------
+# 6. TRAIN (SANITY CHECK)
+# -------------------------------
+distiller.fit(dataset, epochs=2)
