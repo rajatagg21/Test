@@ -1,0 +1,70 @@
+import tensorflow as tf
+from tensorflow.keras import layers, ops
+
+class DistillableMHA(layers.Layer):
+    # ... __init__ stays the same ...
+
+    def _compute_attention_mask(self, query, value, query_mask=None, value_mask=None):
+        """Replicating official Keras broadcasting logic"""
+        auto_mask = None
+        
+        if query_mask is not None:
+            query_mask = tf.cast(query_mask, tf.bool)
+            # Shape: [Batch, Seq_Q, 1]
+            auto_mask = query_mask[:, :, tf.newaxis]
+            
+        if value_mask is not None:
+            value_mask = tf.cast(value_mask, tf.bool)
+            # Shape: [Batch, 1, Seq_V]
+            mask = value_mask[:, tf.newaxis, :]
+            # Logical AND merges them to [Batch, Seq_Q, Seq_V]
+            auto_mask = mask if auto_mask is None else auto_mask & mask
+            
+        return auto_mask
+
+    def call(self, query, value, key=None, query_mask=None, value_mask=None, training=None):
+        if key is None:
+            key = value
+        
+        batch_size = tf.shape(query)[0]
+
+        # 1. Compute the Broadcasable Mask [B, T, S]
+        # This resolves the 'Equal_1' error by explicitly handling the boolean logic
+        combined_mask = self._compute_attention_mask(query, value, query_mask, value_mask)
+
+        # 2. Linear Projections & Split Heads
+        q = self.split_heads(self.q_dense(query), batch_size)
+        k = self.split_heads(self.k_dense(key), batch_size)
+        v = self.split_heads(self.v_dense(value), batch_size)
+
+        # 3. Q-K Attention
+        qk_logits = tf.matmul(q, k, transpose_b=True)
+        qk_logits = qk_logits / tf.math.sqrt(tf.cast(self.head_dim, tf.float32))
+
+        # Apply mask if exists
+        if combined_mask is not None:
+            # Cast to float and add 4th dimension for heads: [B, 1, T, S]
+            float_mask = tf.cast(combined_mask, qk_logits.dtype)
+            float_mask = float_mask[:, tf.newaxis, :, :]
+            # Standard additive mask (-1e9)
+            qk_logits += (1.0 - float_mask) * -1e9
+
+        attn_weights = tf.nn.softmax(qk_logits, axis=-1)
+
+        # 4. V-V Relation (MiniLM Distillation)
+        vv_logits = tf.matmul(v, v, transpose_b=True)
+        vv_logits = vv_logits / tf.math.sqrt(tf.cast(self.head_dim, tf.float32))
+
+        # MiniLM usually masks V-V relations same as Q-K to ignore padding correlations
+        if combined_mask is not None:
+            vv_logits += (1.0 - float_mask) * -1e9
+            
+        vv_relation = tf.nn.softmax(vv_logits, axis=-1)
+
+        # 5. Output Fusion
+        weighted_v = tf.matmul(attn_weights, v)
+        weighted_v = tf.transpose(weighted_v, perm=[0, 2, 1, 3])
+        concat_v = tf.reshape(weighted_v, (batch_size, -1, self.embed_dim))
+        output = self.out_dense(concat_v)
+
+        return output, attn_weights, vv_relation
