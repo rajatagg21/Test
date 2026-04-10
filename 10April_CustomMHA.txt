@@ -1,33 +1,34 @@
 import tensorflow as tf
-from tensorflow.keras import layers
+from tensorflow.keras import layers, initializers
 
 class DistillableMHA(layers.Layer):
-    def __init__(self, num_heads, embed_dim, **kwargs):
+    def __init__(self, num_heads, embed_dim, kernel_initializer='glorot_uniform', **kwargs):
         super(DistillableMHA, self).__init__(**kwargs)
         self.num_heads = num_heads
         self.embed_dim = embed_dim
+        self.kernel_initializer = initializers.get(kernel_initializer)
         
-        # Internal Head Dimension Calculation
+        # Proper head size calculation with exception handling
         if embed_dim % num_heads != 0:
             raise ValueError(
-                f"embed_dim ({embed_dim}) must be divisible by "
-                f"num_heads ({num_heads})."
+                f"Invalid configuration: embed_dim ({embed_dim}) must be divisible "
+                f"by num_heads ({num_heads}) for equal head distribution."
             )
         
         self.head_dim = embed_dim // num_heads
         
-        # Projections: Output matches embed_dim
-        self.q_dense = layers.Dense(embed_dim)
-        self.k_dense = layers.Dense(embed_dim)
-        self.v_dense = layers.Dense(embed_dim)
+        # Projections with custom initialization
+        self.q_dense = layers.Dense(embed_dim, kernel_initializer=self.kernel_initializer, use_bias=True)
+        self.k_dense = layers.Dense(embed_dim, kernel_initializer=self.kernel_initializer, use_bias=True)
+        self.v_dense = layers.Dense(embed_dim, kernel_initializer=self.kernel_initializer, use_bias=True)
         
-        # Final output projection (W_O)
-        self.out_dense = layers.Dense(embed_dim)
+        # Fusion matrix (W_O)
+        self.out_dense = layers.Dense(embed_dim, kernel_initializer=self.kernel_initializer, use_bias=True)
 
     def split_heads(self, x, batch_size):
-        # Reshape: (batch, seq_len, num_heads, head_dim)
+        # [Batch, Seq_Len, Embed_Dim] -> [Batch, Seq_Len, Heads, Head_Dim]
         x = tf.reshape(x, (batch_size, -1, self.num_heads, self.head_dim))
-        # Transpose to: (batch, num_heads, seq_len, head_dim)
+        # -> [Batch, Heads, Seq_Len, Head_Dim]
         return tf.transpose(x, perm=[0, 2, 1, 3])
 
     def call(self, query, value, key=None, mask=None, training=None):
@@ -36,41 +37,42 @@ class DistillableMHA(layers.Layer):
         
         batch_size = tf.shape(query)[0]
 
-        # 1. Linear Projections & Head Splitting
+        # 1. Linear Projections
         q = self.split_heads(self.q_dense(query), batch_size)
         k = self.split_heads(self.k_dense(key), batch_size)
         v = self.split_heads(self.v_dense(value), batch_size)
 
-        # 2. Q-K Attention Distribution (Rel_QK)
-        # Result: (batch, num_heads, seq_len_q, seq_len_k)
+        # 2. Q-K Relation (Attention Distribution)
         qk_logits = tf.matmul(q, k, transpose_b=True)
         qk_logits = qk_logits / tf.math.sqrt(tf.cast(self.head_dim, tf.float32))
         
         if mask is not None:
-            # Apply additive mask (usually -1e9 for padding/causal)
             qk_logits += mask
-            
         attn_weights = tf.nn.softmax(qk_logits, axis=-1)
 
-        # 3. Value-Value Relation (Rel_VV) 
-        # Result: (batch, num_heads, seq_len_v, seq_len_v)
+        # 3. V-V Relation (Value-Value relations for MiniLM)
         vv_logits = tf.matmul(v, v, transpose_b=True)
         vv_logits = vv_logits / tf.math.sqrt(tf.cast(self.head_dim, tf.float32))
         
-        # Note: Usually VV relations in MiniLM use the same mask as QK 
-        # to ignore padding tokens in the relation matrix.
         if mask is not None:
             vv_logits += mask
-            
         vv_relation = tf.nn.softmax(vv_logits, axis=-1)
 
-        # 4. Concatenate and Project Output
-        # (batch, num_heads, seq_len_q, head_dim)
+        # 4. Concatenation and Head Fusion
         weighted_v = tf.matmul(attn_weights, v)
         weighted_v = tf.transpose(weighted_v, perm=[0, 2, 1, 3])
-        
-        # Merge heads back to embed_dim
         concat_v = tf.reshape(weighted_v, (batch_size, -1, self.embed_dim))
+        
+        # Apply the fusion matrix (out_dense)
         output = self.out_dense(concat_v)
 
         return output, attn_weights, vv_relation
+
+    def get_config(self):
+        config = super().get_config()
+        config.update({
+            "num_heads": self.num_heads,
+            "embed_dim": self.embed_dim,
+            "kernel_initializer": initializers.serialize(self.kernel_initializer),
+        })
+        return config
